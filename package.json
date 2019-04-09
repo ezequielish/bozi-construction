@@ -1,0 +1,19 @@
+{
+  "name": "boziweb",
+  "version": "1.0.0",
+  "description": "Sito web de Construcciones y Reformas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ezequielish/bozi-construction.git"
+  },
+  "author": "@ezequiel_ish",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ezequielish/bozi-construction/issues"
+  },
+  "homepage": "https://github.com/ezequielish/bozi-construction#readme"
+}
