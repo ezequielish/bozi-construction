@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 30 30"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="close_menu.svg"
+   width="30"
+   height="30"
+   inkscape:version="0.92.4 (33fec40, 2019-01-16)">
+  <metadata
+     id="metadata10">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="857"
+     inkscape:window-height="480"
+     id="namedview6"
+     showgrid="false"
+     inkscape:zoom="2.0742187"
+     inkscape:cx="24.146654"
+     inkscape:cy="58.092492"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg4" />
+  <path
+     d="m 20.059728,14.226931 7.107245,-7.1072446 c 0.872159,-0.872159 0.872159,-2.286222 0,-3.159091 l -1.579546,-1.579546 c -0.872159,-0.872159 -2.286221,-0.872159 -3.159091,0 L 15.321092,9.488295 8.213848,2.3810494 c -0.8721591,-0.872159 -2.2862216,-0.872159 -3.1590909,0 l -1.5795455,1.579546 c -0.8721591,0.872159 -0.8721591,2.286221 0,3.159091 l 7.1072444,7.1072446 -7.1072444,7.107244 c -0.8721591,0.872159 -0.8721591,2.286222 0,3.159091 l 1.5795455,1.579546 c 0.8721591,0.872159 2.2869318,0.872159 3.1590909,0 l 7.107244,-7.107245 7.107244,7.107245 c 0.872159,0.872159 2.286932,0.872159 3.159091,0 l 1.579546,-1.579546 c 0.872159,-0.872159 0.872159,-2.286221 0,-3.159091 z"
+     id="path2"
+     inkscape:connector-curvature="0"
+     style="stroke-width:0.07102273" />
+</svg>
+<!--
+Font Awesome Free 5.3.1 by @fontawesome - https://fontawesome.com
+License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+-->
+
