@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Services from '../Services';
-import gremio from '../../assets/img/services_category/gremio.svg';
+import gremio from '../../assets/img/icons/services_category/gremio.svg';
 class ServicesContainer extends Component {
     render() {
         return (

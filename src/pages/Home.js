@@ -3,6 +3,7 @@ import Layout from '../components/Layout';
 import HeroContainer from '../components/container/HeroContainer';
 import ServicesContainer from '../components/container/ServicesContainer';
 import About from '../components/About';
+import Methodology from '../components/Methodology';
 class Home extends Component {
     render() {
         return (
@@ -10,6 +11,7 @@ class Home extends Component {
                 <HeroContainer />
                 <ServicesContainer />
                 <About />
+                <Methodology />
             </Layout>
         )
     }
