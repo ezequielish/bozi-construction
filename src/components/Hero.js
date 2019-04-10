@@ -1,7 +1,7 @@
 import React from 'react';
 const Hero = (props) => {
     return (
-        <section className='hero'>
+        <section className='Hero'>
             {props.children}
         </section>
     )
