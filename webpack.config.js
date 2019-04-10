@@ -18,7 +18,8 @@ const config = {
                 test: /\.(css)$/,
                 use: [
                     "style-loader", // creates style nodes from JS strings
-                    "css-loader", // translates CSS into CommonJS
+                    { loader: ' css-loader ', opciones: { importLoaders: 1 } },// translates CSS into CommonJS |
+                    "postcss-loader"
                 ]
             },
             {
