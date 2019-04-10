@@ -18,8 +18,18 @@ const config = {
                 test: /\.(css)$/,
                 use: [
                     "style-loader", // creates style nodes from JS strings
-                    { loader: ' css-loader ', opciones: { importLoaders: 1 } },// translates CSS into CommonJS |
-                    "postcss-loader"
+                    {
+                        loader: 'css-loader',
+                        options: { importLoaders: 1 }
+                    },// translates CSS into CommonJS |
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            config: {
+                                path: path.resolve(__dirname, 'postcss.config.js')
+                            }
+                        }
+                    }
                 ]
             },
             {
@@ -49,7 +59,7 @@ const config = {
 
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, './src/index.html')
+            template: path.resolve(__dirname, 'src/index.html')
         })
     ],
 
