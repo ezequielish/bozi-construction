@@ -20,14 +20,23 @@ const config = {
                     "style-loader", // creates style nodes from JS strings
                     {
                         loader: 'css-loader',
-                        options: { importLoaders: 1 }
+                        options: {
+                            importLoaders: 1,
+                        }
                     },// translates CSS into CommonJS |
                     {
                         loader: 'postcss-loader',
                         options: {
-                            config: {
-                                path: path.resolve(__dirname, 'postcss.config.js')
-                            }
+                            ident: 'postcss',
+                            plugins: (loader) => [
+                                require('postcss-import')({ root: loader.resourcePath }),
+                                require('postcss-nesting'),
+                                require('postcss-apply'),
+                                require('postcss-custom-media')({
+                                    preserve: false
+                                }),
+                                require('postcss-preset-env')(),
+                            ]
                         }
                     }
                 ]

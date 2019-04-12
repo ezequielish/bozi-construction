@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from '../assets/img/logo.svg';
 import btnOpen from '../assets/img/icons/open_menu.svg';
+import '../assets/css/components/header.css';
 class Header extends Component {
 
     render() {
@@ -8,8 +9,8 @@ class Header extends Component {
             <header>
                 <nav>
                     <div className='Navbar__marca'>
-                        <figure className='Navbar__marca-figure'>
-                            <img className='Navbar__marca-img' width="100px" height="100px" alt='Logo bozi' src={logo} />
+                        <figure>
+                            <img width="100%" height="100%" alt='Logo bozi' src={logo} />
                         </figure>
                     </div>
                     <ul>

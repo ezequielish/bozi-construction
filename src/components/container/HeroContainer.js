@@ -12,8 +12,8 @@ class HeroContainer extends Component {
                     <button className='btn-primary'>PEDIR PRESUPUESTO</button>
                 </div>
                 <div className='Hero__slider'>
-                    <div className='Hero__slider-item'>
-                        <img src={img1} />
+                    <div className='slider-item'>
+                        <img src={img1} width='100%' height='100%' />
                     </div>
 
                     <div className='items-icon'>O O O</div>

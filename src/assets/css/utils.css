@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+:root{
+    --dosis-font: 'Dosis', system-ui; 
+
+    /* Colors */
+    --red_btn: #d54130; 
+    --red_icon: #aa3d30ff;
+    --white-color: #ffffff;
+    --black-color: #2f2f2f;
+    --gray-color:#535353;
+    /*Spacing*/
+    --spacing_small: 5px;
+    --spacing_medium: 15px;
+    --spacing_large: 25px;
+    /* 3a1b42d7 */
+}

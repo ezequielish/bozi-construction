@@ -1,0 +1,24 @@
+.Services{
+
+    text-align: center;
+    & h1{
+        color:var(--black-color);
+    }
+    & p{
+        color: var(--gray-color);
+        padding: var(--spacing_medium);
+        text-align: center;
+    }
+
+    & .Services__category{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        & figure{
+            margin:0;
+        }
+        & h3{
+            margin-top:0;
+            color: var(--gray-color);
+        }
+    }
+}

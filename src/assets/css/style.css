@@ -1,3 +1,11 @@
+@import './utils.css';
+@import './components/hero.css';
+@import './components/services.css';
+@import './components/about.css';
+@import './components/methodology.css';
 body{
-    background: red;
+    background: var(--white-color);
+    font-size: 1em;
+    font-family: var(--dosis-font);
+    margin: 0;
 }

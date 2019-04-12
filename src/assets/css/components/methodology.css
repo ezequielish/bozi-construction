@@ -1,0 +1,43 @@
+.Methodology{
+    text-align: center;
+    & .Methodology__image{
+        & figure{
+            margin: 0;
+            height: 300px;
+            width: 100%;
+            overflow: hidden;
+            & img{
+                width: 100%;
+                height: 100%;
+                transform: scale(1.5);
+            }
+        }
+    }
+    & .Methodology__items{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &  .items-title{
+            & p{
+                font-size: 1.2em;
+            }
+        }
+        & .items-circle{
+            display: flex;
+            margin: var(--spacing_large);
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color :red;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        } 
+        & .line {
+            border: solid var(--gray-color) 1px;
+            width: 70px;
+        }
+    }
+}
+

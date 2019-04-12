@@ -2,17 +2,17 @@ import React, { Component } from 'react';
 import aboutImg from '../assets/img/about.jpg';
 const About = (props) => {
     return (
-        <section>
+        <section className='About'>
             <h1>Nosotros</h1>
             <div className='About__level'>
                 <div className='About__image'>
                     <figure>
-                        <div className='About__figure-decorator'></div>
-                        <img src={aboutImg} />
+                        <div className='figure-decorator'></div>
+                        <img src={aboutImg} className='about-img' />
                     </figure>
                 </div>
                 <div className="About__description">
-                    <h2>SERVICIO DE CALIDAD</h2>
+                    <h3>SERVICIO DE CALIDAD</h3>
                     <p>
                         Bozi Construcciones y Reformas, cuenta con una amplia experiencia en el sector de la construcción, lo que le ha permitido especializarse en todo tipo de trabajos de Construcción especializándonos sobre todo en reformas integrales de vivienda y reformas.
                     </p>

@@ -1,0 +1,27 @@
+.About{
+    text-align: center;
+    & h1{
+        color: var(--black-color);
+    }    
+    & h3{
+        color: var(--black-color);
+    }
+    & p{
+        color: var(--gray-color);
+        padding: var(--spacing_medium);
+        text-align: center;
+    }
+    & .About__image{
+       & figure{
+          margin: 0;
+          height: 300px;
+          width: 100%;
+          overflow: hidden;
+          & img{
+              width: 100%;
+              height: 100%;
+              transform: scale(2);
+          }
+        }
+    }
+}
