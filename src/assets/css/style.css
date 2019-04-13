@@ -4,9 +4,13 @@
 @import './components/about.css';
 @import './components/methodology.css';
 @import './components/projects.css';
+@import './components/contact.css';
 body{
     background: var(--white-color);
     font-size: 1em;
     font-family: var(--dosis-font);
     margin: 0;
+}
+section{
+    margin-bottom: var(--spacing_large);
 }

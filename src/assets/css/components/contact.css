@@ -1,0 +1,73 @@
+.Contact{
+    text-align: center;
+    padding: var(--spacing_medium);
+    background : linear-gradient(to bottom, rgba(181, 187, 195, .4) 0%,rgba(127, 132, 136, .4) 36%,rgba(40,52,59,.4) 100%),url('../img/backgrounds/contact.jpg') center / cover; 
+    
+    background-size: cover;
+    & h1{
+        padding: var(--spacing_large);
+        color:var(--black-color);
+    }
+    & h2{
+        color:var(--white-color);  
+    }
+    & h3{
+        color:var(--white-color);  
+    }
+    & p{
+        color:var(--white-color);  
+    }
+    & .Contact__description{
+        & .description-info{
+            margin-top: var(--spacing_large);
+        }   
+    }
+    & .Contact__form{
+        & form{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: var(--spacing_medium);
+            & input{
+                border: none;
+                height: 30px;
+                padding: var(--spacing_small) var(--spacing_small) var(--spacing_medium) var(--spacing_small);
+                border-bottom: 1px solid var(--grey-color);
+                outline: none;
+                margin-top: var(--spacing_medium);
+                background: none;
+                color: var(--white-color);
+                &::placeholder{
+                    color: var(--white-color);
+                }
+                &:focus{
+                    border-bottom: 1px solid var(--white-color);
+                }
+            }
+            & textarea{
+                border: none;
+                height: 30px;
+                padding: var(--spacing_small) var(--spacing_small) var(--spacing_large) var(--spacing_small);                
+                border-bottom: 1px solid var(--grey-color);
+                outline: none;
+                background: none;
+                color: var(--white-color);
+                margin-top: var(--spacing_medium);
+                &::placeholder{
+                    color: var(--white-color);
+                }
+                &:focus{
+                    border-bottom: 1px solid var(--white-color);
+                }
+            }
+            & button{
+                margin-top: var(--spacing_large);
+                padding: var(--spacing_medium);
+                background: none;
+                border:solid 1px var(--white-color);
+                color: var(--white-color);
+            }
+        }
+    }
+}
+/* background : linear-gradient(to bottom, rgba(181,189,200,.3) 0%,rgba(130,140,149,.3) 36%,rgba(40,52,59,.3) 100%),url('../img/backgrounds/contact.jpg') center / cover;  */

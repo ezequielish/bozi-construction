@@ -1,5 +1,5 @@
 .Hero{
-    border: solid black 1px;
+    /* border: solid black 1px; */
     overflow: hidden;
     display: flex;
     justify-content: center;
