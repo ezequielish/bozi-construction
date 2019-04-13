@@ -8,9 +8,11 @@
     --white-color: #ffffff;
     --black-color: #2f2f2f;
     --gray-color:#535353;
+    --gray-light:#fafafa;
     /*Spacing*/
     --spacing_small: 5px;
     --spacing_medium: 15px;
     --spacing_large: 25px;
+    /* --margin */
     /* 3a1b42d7 */
 }

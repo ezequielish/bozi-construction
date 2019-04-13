@@ -3,6 +3,7 @@
 @import './components/services.css';
 @import './components/about.css';
 @import './components/methodology.css';
+@import './components/projects.css';
 body{
     background: var(--white-color);
     font-size: 1em;
