@@ -9,7 +9,8 @@ const config = {
         filename: "bundle.js",
     },
     devServer: {
-        port: 3000,
+
+        port: 3000
     },
     module: {
         rules: [
@@ -59,7 +60,8 @@ const config = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['@babel/preset-env', '@babel/preset-react']
+                        presets: ['@babel/preset-env', '@babel/preset-react'],
+                        plugins: ["@babel/plugin-proposal-class-properties"]
                     }
                 }
             }

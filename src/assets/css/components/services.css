@@ -1,8 +1,8 @@
 .Services{
-
-    text-align: center;
+    padding: var(--spacing_large);
     & h1{
         color:var(--black-color);
+        text-align: center;
     }
     & p{
         color: var(--gray-color);
@@ -11,14 +11,25 @@
     }
 
     & .Services__category{
+        justify-content: center;
+        align-items: center;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        padding: 15px;
         & figure{
             margin:0;
+            width: 90%;
+            height: 100%;
+            cursor: pointer;
+            transition: .3s;
+            &:hover{
+                transform: scale(1.1);
+                box-shadow: 2px 2px 2px rgba(0, 0, 0, .6);
+            }
         }
         & h3{
-            margin-top:0;
             color: var(--gray-color);
+            text-align: center;
         }
     }
 }

@@ -41,22 +41,46 @@
         width: 100%;
         /* border:solid blueviolet 1px; */
         background-color : black; 
-        & .slider-item{              
+        & .slider-item{  
+            opacity: .6;            
             & img{
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
-                opacity: .6;
+                opacity: 0;
                 position: absolute;
                 transform: scale(2.5);
+                
             }         
         }
-        & .items-icon{
+        & .Hero__items_icon{
             /* border: solid 1px black; */
+            justify-content: center;
+            display: flex;
+            align-items: center;
             position: absolute;
             width: 100%;
             bottom: 0;
             text-align: center;
+            & .Hero__circle_carrusel{
+                /* background-color: var(--white-color); */
+                border: solid 1px white; 
+                width:15px;
+                height: 15px;
+                margin: var(--spacing_medium);
+                border-radius: 50%;
+                color: var(--white-color);
+                transition: all 1s;
+                cursor: pointer;
+            }
         }
     }
+}
+
+.active_iten_circle{
+    background-color: var(--white-color);
+    
+}
+.active_carrusel_img{
+    opacity: 1;
 }

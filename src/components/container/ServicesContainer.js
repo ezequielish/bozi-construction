@@ -1,11 +1,52 @@
 import React, { Component } from 'react';
 import Services from '../Services';
-import gremio from '../../assets/img/icons/services_category/gremio.svg';
+import service_1 from '../../assets/img/icons/services_category/reforma.svg';
+import service_2 from '../../assets/img/icons/services_category/pintura.svg';
+import service_3 from '../../assets/img/icons/services_category/fachada.svg';
+import service_4 from '../../assets/img/icons/services_category/bajante.svg';
+import { CSSTransition } from 'react-transition-group';
+let html = document.querySelector('html')
 class ServicesContainer extends Component {
-    constructor() {
-        super()
-        this.items = [0, 1, 2, 3, 4, 5];
+    state = {
+        carrusel: false,
+        items: [
+            {
+                img: service_1,
+                description: 'Reformas'
+            },
+            {
+                img: service_2,
+                description: 'Pinturas'
+            },
+            {
+                img: service_3,
+                description: 'Fachadas'
+            },
+            {
+                img: service_4,
+                description: 'Bajantes'
+            }
+        ]
     }
+
+
+    // componentDidMount() {
+
+    //     this.setState({
+    //         carrusel: true
+    //     })
+    //     console.log(html)
+    //     let $elemento = document.querySelector('.Services__category-items');
+    //     let $elementoY = $elemento.offsetTop;
+    //     document.addEventListener('scroll', () => {
+    //         let topV = html.scrollTop;
+    //         if (topV > $elementoY - 600) {
+    //             console.log('me animo antes de llegar')
+    //         }
+
+    //     })
+    // }
+
     render() {
         return (
             <Services>
@@ -18,22 +59,28 @@ class ServicesContainer extends Component {
                         Responsabilidad y garantía total de la obra a realizar. Diseño, planificación y seguimiento constante durante todo el periodo de intervención. Estricto cumplimiento de las normas de seguridad.
                     </p>
                 </div>
+
+
                 <div className='Services__category'>
                     {
-                        this.items.map(i => {
+                        this.state.items.map(i => {
                             return (
-                                <div className='Services__category-items'>
+
+                                <div className='Services__category-items' onScroll={this.jeje}>
                                     <figure>
-                                        <img src={gremio} width='80px' height='80px' />
+                                        {/* <CSSTransition in={this.state.carrusel} timeout={1500} classNames="fade"> */}
+                                        <img src={i.img} width='100%' height='100%' />
+                                        {/* </CSSTransition> */}
                                     </figure>
                                     <div className='Services__category-items_title'>
-                                        <h3>Gremio</h3>
+                                        <h3>{i.description}</h3>
                                     </div>
                                 </div>
                             )
                         })
                     }
                 </div>
+
             </Services>
         )
     }

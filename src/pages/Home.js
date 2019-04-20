@@ -6,11 +6,13 @@ import About from '../components/About';
 import Methodology from '../components/Methodology';
 import ProjectsContainer from '../components/container/ProjectsContainer';
 import ContactContainer from '../components/container/ContactContainer';
+import data from '../data/app';
+// console.log(data.portadas)
 class Home extends Component {
     render() {
         return (
             <Layout>
-                <HeroContainer />
+                <HeroContainer data={data.portadas} />
                 <ServicesContainer />
                 <About />
                 <Methodology />

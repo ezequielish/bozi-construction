@@ -1,0 +1,34 @@
+{
+    "menu": [
+        {
+            "title": "Nuestros servicios",
+            "href": ""
+        },
+        {
+            "title": "Nosotros",
+            "href": ""
+        },
+        {
+            "title": "Proyectos",
+            "href": ""
+        },
+        {
+            "title": "Contactanos",
+            "href": ""
+        }
+    ],
+    "portadas": [
+        {
+            "alt": "cocina reforma",
+            "url": "./src/assets/img/backgrounds/img-1.jpg"
+        },
+        {
+            "alt": "cocina reforma",
+            "url": "./src/assets/img/backgrounds/img-2.jpg"
+        },
+        {
+            "alt": "baño reforma",
+            "url": "./src/assets/img/backgrounds/img-3.jpg"
+        }
+    ]
+}

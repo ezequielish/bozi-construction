@@ -1,0 +1,76 @@
+ 
+.displace_right{
+  
+}
+.displace_left{
+  
+}
+/*1)Cuando aparece | state:true*/
+.displace_left-enter-active { 
+  animation-name: displace_left;
+  animation-duration: .3s;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+
+}
+/*1)Cuando aparece | state:true*/
+.displace_right-enter-active { 
+  animation-name: displace_right;
+  animation-duration: .3s;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+
+}
+ /*2) despúes que aparece | state:true*/
+.displace_right-enter-done{ 
+  /* animation-name: desplazar_exit;
+  animation-fill-mode: initial;
+  animation-duration: 1.5s;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transform: translateX(400px) scale(2.5); */
+}
+
+ /*2) cuando se va | state:false*/
+  /* .fade-exit-done { */
+    /* animation-name: desplazar;
+    animation-duration: 1.5s;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
+  /* } */
+ 
+   /* .fade-exit-active { */
+    /* animation-name: desplazar_exit;
+    animation-duration: 1.5s;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
+  /* }   */
+
+
+
+
+/* 
+  .items-enter-active{
+    animation-name: desplazar;
+    animation-duration: 1.5s;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  } */
+
+  @keyframes displace_right{
+    from{
+      /* opacity: .4; */
+      transform: translateX(200px) scale(2.5);
+    }
+
+    to{
+      /* opacity: .6; */
+      transform: translateX(0px) scale(2.5);
+    }
+  }
+
+  @keyframes displace_left{
+    from{
+      /* opacity: .4; */
+      transform: translateX(-200px) scale(2.5);
+    }
+
+    to{
+      /* opacity: .6; */
+      transform: translateX(0px) scale(2.5);
+    }
+  }
