@@ -30,22 +30,6 @@ class ServicesContainer extends Component {
     }
 
 
-    // componentDidMount() {
-
-    //     this.setState({
-    //         carrusel: true
-    //     })
-    //     console.log(html)
-    //     let $elemento = document.querySelector('.Services__category-items');
-    //     let $elementoY = $elemento.offsetTop;
-    //     document.addEventListener('scroll', () => {
-    //         let topV = html.scrollTop;
-    //         if (topV > $elementoY - 600) {
-    //             console.log('me animo antes de llegar')
-    //         }
-
-    //     })
-    // }
 
     render() {
         return (
@@ -66,13 +50,11 @@ class ServicesContainer extends Component {
                         this.state.items.map(i => {
                             return (
 
-                                <div className='Services__category-items' onScroll={this.jeje}>
+                                <div className='Services__category_items' onScroll={this.jeje}>
                                     <figure>
-                                        {/* <CSSTransition in={this.state.carrusel} timeout={1500} classNames="fade"> */}
                                         <img src={i.img} width='100%' height='100%' />
-                                        {/* </CSSTransition> */}
                                     </figure>
-                                    <div className='Services__category-items_title'>
+                                    <div className='Services__category_items_title'>
                                         <h3>{i.description}</h3>
                                     </div>
                                 </div>

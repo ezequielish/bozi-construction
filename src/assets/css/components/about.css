@@ -11,6 +11,9 @@
         padding: var(--spacing_medium);
         text-align: center;
     }
+    & .About__description{
+        padding: var(--spacing_medium);
+    }
     & .About__image{
        & figure{
           margin: 0;

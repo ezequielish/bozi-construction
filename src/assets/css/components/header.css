@@ -22,7 +22,7 @@ header{
     & ul{
         display: none;
     }
-    & .Navbar__btn-menu{
+    & .Navbar__btn_menu{
         /* display: none; */
         /* border:solid red 1px; */
         position: absolute;

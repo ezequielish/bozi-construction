@@ -8,7 +8,6 @@ class HeroContainer extends Component {
     state = {
         carrusel: false,
         countPortada: 0,
-        // countMax: 3,
         turns: null
     }
 
@@ -45,7 +44,7 @@ class HeroContainer extends Component {
             turns: setInterval(() => {
 
                 this.setState({ countPortada: this.state.countPortada + 1, carrusel: true })
-                if (this.state.countPortada >= itemImg.length) { // restart carrusel 
+                if (this.state.countPortada >= itemImg.length) { // restart the carousel if the return is greater than the limit
                     this.setState({ countPortada: 0 })
                 }
 

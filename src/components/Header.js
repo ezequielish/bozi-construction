@@ -28,7 +28,7 @@ class Header extends Component {
                         </li>
                     </ul>
                 </nav>
-                <div className='Navbar__btn-menu'>
+                <div className='Navbar__btn_menu'>
                     <span><img width='20px' height='20px' src={btnOpen} alt='boton open' /></span>
                 </div>
 

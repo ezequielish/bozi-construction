@@ -1,10 +1,8 @@
  
-.displace_right{
-  
-}
-.displace_left{
-  
-}
+.displace_right{}
+
+.displace_left{}
+
 /*1)Cuando aparece | state:true*/
 .displace_left-enter-active { 
   animation-name: displace_left;

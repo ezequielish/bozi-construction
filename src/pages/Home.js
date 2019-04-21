@@ -15,7 +15,7 @@ class Home extends Component {
                 <HeroContainer data={data.portadas} />
                 <ServicesContainer />
                 <About />
-                <Methodology />
+                <Methodology data={data.methodology} />
                 <ProjectsContainer />
                 <ContactContainer />
             </Layout>

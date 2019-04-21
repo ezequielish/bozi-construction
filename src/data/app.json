@@ -30,5 +30,32 @@
             "alt": "baño reforma",
             "url": "./src/assets/img/backgrounds/img-3.jpg"
         }
+    ],
+    "methodology": [
+        {
+            "description": "CONTACTO Y PRESENTACIÓN",
+            "img": "./src/assets/img/icons/methodology/contact.svg",
+            "_id": 1
+        },
+        {
+            "description": "VISITA Y MEDICIÓN | APUNTES DE DATOS",
+            "img": "./src/assets/img/icons/methodology/medicion.svg",
+            "_id": 2
+        },
+        {
+            "description": "PROPUESTA DISTRIBUCIÓN + PRESUPUESTO",
+            "img": "./src/assets/img/icons/methodology/distribucion.svg",
+            "_id": 3
+        },
+        {
+            "description": "PROYECTO | PROPUESTA DE MOBILIARIO Y ACABADOS",
+            "img": "./src/assets/img/icons/methodology/mobiliario.svg",
+            "_id": 4
+        },
+        {
+            "description": "FINALIZACIÓN DEL PROYECTO",
+            "img": "./src/assets/img/icons/methodology/final.svg",
+            "_id": 5
+        }
     ]
 }

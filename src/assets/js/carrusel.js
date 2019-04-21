@@ -8,6 +8,8 @@ const transformInArray = (objectItem) => {
 
     return $items
 }
+
+//This function is activated when start or carousel
 function inizialitedCarrusel(itemsImg, btnCarrusel, countPortada) {
     /**Mark circle carrusel */
 
@@ -15,11 +17,8 @@ function inizialitedCarrusel(itemsImg, btnCarrusel, countPortada) {
 
     $itemBtn.map((item, index) => {
         item.classList.remove('active_iten_circle')
-        // console.log($itemBtn.length)
         if (countPortada === index) {
             item.classList.add('active_iten_circle')
-            // console.log(item.classList.add('active_iten_circle'))
-            console.log('portada act', countPortada)
         }
     })
 
@@ -34,15 +33,15 @@ function inizialitedCarrusel(itemsImg, btnCarrusel, countPortada) {
     })
 }
 
+//This function is activated when you click on an item
 function change(itemsImg, btnCarrusel, btn) {
     let $itemBtn = transformInArray(btnCarrusel) //are created array circle in the carrusel
 
     $itemBtn.map((item, index) => {
-        item.classList.remove('active_iten_circle')
-        // console.log($itemBtn.length)
+        item.classList.remove('active_iten_circle')//remove class item
+
         if (btn == index) {
-            item.classList.add('active_iten_circle')
-            // console.log(item.classList.add('active_iten_circle'))
+            item.classList.add('active_iten_circle')//add class it item active
         }
     })
 

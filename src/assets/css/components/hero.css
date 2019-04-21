@@ -49,6 +49,7 @@
                 object-fit: cover;
                 opacity: 0;
                 position: absolute;
+                will-change: transform,opacity;
                 transform: scale(2.5);
                 
             }         

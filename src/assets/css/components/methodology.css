@@ -13,31 +13,35 @@
             }
         }
     }
-    & .Methodology__items{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        &  .items-title{
-            & p{
-                font-size: 1.2em;
-            }
-        }
-        & .items-circle{
-            display: flex;
-            margin: var(--spacing_large);
-            flex-direction: column;
+    & .Methodology__level{
+        padding: var(--spacing_medium);
+        & .Methodology__items{
+            transform: translateY(-15px);
+            opacity: 0;
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            flex-direction: row;
             justify-content: center;
             align-items: center;
-            background-color :var(--red_btn);
-            border-radius: 50%;
-            width: 100px;
-            height: 100px;
-        } 
-        & .line {
-            border: solid var(--gray-color) 1px;
-            width: 70px;
+            &  .Methodology__items_title{
+                & p{
+                    font-size: 1.2em;
+                    padding: var(--spacing_small: 5px);
+                }
+            }
+            & .Methodology__items_circle{
+                display: flex;
+                margin: var(--spacing_large);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color :var(--red_btn);
+                border-radius: 50%;
+                width: 60px;
+                height: 60px;
+            } 
         }
     }
+
 }
 

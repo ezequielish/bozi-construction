@@ -19,7 +19,7 @@ class ProjectsContainer extends Component {
 
                             </div>
                             <div className='items-p'>
-                                <p> Voto del cliente </p>
+                                <p> Referencia del cliente </p>
                                 <div className='stars'>
 
                                     <img src={star} width='100%' height='100%' />
@@ -39,7 +39,7 @@ class ProjectsContainer extends Component {
                         <div className='items-description'>
                             <h3>Nombre proyecto</h3>
                             <div className='items-p'>
-                                <p> Voto del cliente </p>
+                                <p> Referencia del cliente </p>
                                 <div className='stars'>
                                     <img src={star} width='100%' height='100%' />
                                     <img src={star} width='100%' height='100%' />
