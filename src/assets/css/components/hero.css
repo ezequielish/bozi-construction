@@ -34,6 +34,12 @@
             width: 70%;
             font-weight: bold;
             box-shadow: 2px 2px 3px rgba(0,0,0,.6);
+            cursor: pointer;
+            outline: none;
+            will-change: transform;
+            &:active{
+                transform: scale(.9);
+            }
         }
     }
     & .Hero__slider{
@@ -49,6 +55,7 @@
                 height: 100%;
                 object-fit: cover;
                 opacity: 0;
+                transition: all 1s;
                 position: absolute;
                 will-change: transform,opacity;
                 /* transform: scale(2.5); */
@@ -104,4 +111,20 @@
         }
     }
 
+}
+
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+    .Hero{
+        & .Hero__title{
+            & h1{
+                font-size: 1.8em;
+            }
+            & .btn-primary{
+                width: 30%;
+
+            }
+        }
+    }
 }

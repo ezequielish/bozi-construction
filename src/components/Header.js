@@ -4,7 +4,8 @@ import btnOpen from '../assets/img/icons/open_menu.svg';
 import btnClose from '../assets/img/icons/close_menu.svg';
 import '../assets/css/components/header.css';
 import { CSSTransition } from 'react-transition-group';
-import { backgroundEffect } from '../assets/js/effects'
+import { backgroundEffect } from '../assets/js/effects';
+import SocialNetwork from './SocialNetwork';
 class Header extends Component {
     state = {
         menuSwitch: false
@@ -13,9 +14,10 @@ class Header extends Component {
         window.addEventListener('scroll', () => {
             let element = document.querySelector('header');
             let elementTwo = document.querySelector('.Services');
-
-            backgroundEffect(element, elementTwo, 0, 1);
-
+            let screenSize = innerWidth;
+            if (screenSize <= 1000) {
+                backgroundEffect(element, elementTwo, 0, 1);
+            }
         })
     }
     handleMenuToggle() {
@@ -49,9 +51,12 @@ class Header extends Component {
                             <li>
                                 <a href="javascript:void(0)">Contactanos</a>
                             </li>
+                            <li>
+                                <input type="search" placeholder="Buscar..." />
+                            </li>
+                            <SocialNetwork />
                         </ul>
                     </CSSTransition>
-
                 </nav>
                 <div className='Navbar__btn_open' onClick={this.handleMenuToggle.bind(this)}>
                     <span><img src={btnOpen} alt='boton open' /></span>

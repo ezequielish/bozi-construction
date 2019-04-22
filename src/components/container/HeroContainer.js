@@ -18,13 +18,13 @@ class HeroContainer extends Component {
             return
         }
         if (btn.target.dataset.circle > this.state.countPortada) {
-            this.setState({ countPortada: btn.target.dataset.circle, nextClass: 'displace_right', carrusel: true });
+            this.setState({ countPortada: btn.target.dataset.circle, carrusel: true });
             change(itemImg, circlesCarrusel, btn.target.dataset.circle)
             setTimeout(() => {
                 this.setState({ carrusel: false })
             }, 100)
         } else {
-            this.setState({ countPortada: btn.target.dataset.circle, nextClass: 'displace_left', carrusel: true });
+            this.setState({ countPortada: btn.target.dataset.circle, carrusel: true });
             change(itemImg, circlesCarrusel, btn.target.dataset.circle)
             setTimeout(() => {
                 this.setState({ carrusel: false })
@@ -81,9 +81,7 @@ class HeroContainer extends Component {
                         imgPortada.map((i, index) => {
                             return (
                                 <div className='slider-item' key={index}>
-                                    <CSSTransition in={this.state.carrusel} timeout={300} classNames={this.state.nextClass}>
-                                        <img src={i.url} width='100%' height='100%' alt={i.alt} />
-                                    </CSSTransition>
+                                    <img src={i.url} width='100%' height='100%' alt={i.alt} />
                                 </div>
                             )
                         })

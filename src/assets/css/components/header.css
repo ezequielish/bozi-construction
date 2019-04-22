@@ -1,74 +1,88 @@
 header{
     /* border:solid black 1px; */
     height: 15vh;
-    display: grid;
     position: fixed;
     z-index: 2;
     width: 100%;
     background-color: #e8e3e34f;
     justify-content: center;
     align-items: center;
-        & .Navbar__marca{
-        /* border:solid red 1px; */
-        display: flex;
-        justify-content:center;
-        & figure{
-            /* border:solid blue 1px; */
-            width: 80px;
-            height: 80px;
-            margin: 0;
-        }
-    }
-    & ul{
-        background: var(--black-color);
-        height: 100vh;
-        position: absolute;
-        top: 0;
-        margin: 0;
-        right: 0;
-        width: 50%;
-        display: flex;
-        transform: translateX(380px);
-        flex-direction: column;
-        border:solid black 1px;
-        padding: calc(var(--spacing_large) + var(--spacing_large));
-        & li{
-            list-style: none;
-            margin-top: 25px;
-            & a{
-                color:white;
-                text-decoration: none;
-                font-size: 1.2em;
+     & nav{
+        display: grid;
+        height: 100%;
+            & .Navbar__marca{
+            /* border:solid red 1px; */
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            & figure{
+                /* border:solid blue 1px; */
+                width: 80px;
+                height: 80px;
+                margin: 0;
+                cursor: pointer;
             }
         }
-        & .Navbar__btn_close{
+        & ul{
+            background: var(--black-color);
+            height: 100vh;
             position: absolute;
-            right: 0;
             top: 0;
-            padding: var(--spacing_large);
-            cursor: pointer;
-            & img{
-                will-change: transform;
-                transition: all .8s;
-                &:hover{
-                    transform: rotate(180deg);
-                } 
+            margin: 0;
+            z-index: 2;
+            right: 0;
+            width: 50%;
+            display: flex;
+            transform: translateX(380px);
+            flex-direction: column;
+            padding: calc(var(--spacing_large) + var(--spacing_large));
+            & li{
+                list-style: none;
+                margin-top: 25px;
+                & a{
+                    color:white;
+                    text-decoration: none;
+                    font-size: 1.2em;
+                }
+                & input{
+                    border:none;
+                    outline: none;
+                }
             }
+            & .Navbar__btn_close{
+                position: absolute;
+                right: 0;
+                top: 0;
+                padding: var(--spacing_large);
+                cursor: pointer;
+                & img{
+                    will-change: transform;
+                    transition: all .8s;
+                    &:hover{
+                        transform: rotate(180deg);
+                    } 
+                }
 
+            }
         }
-
     }
     & .Navbar__btn_open{
         cursor: pointer;
         position: absolute;
-        right: 0;
-        margin: var(--spacing_large);
-        z-index: -1;
+        right: 20px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        height: 100%;
+        top: 0;
         & img{
             width:20px;
             height: 20px;  
         }
 
+    }
+    & .SocialNetwork{
+        display: none;
     }
 }
 
@@ -76,6 +90,7 @@ header{
 @media (min-width: 600px) {
     header{
         height: 20vh;
+        & nav{
         & .Navbar__marca{
 
             & figure{
@@ -86,10 +101,10 @@ header{
             }
         }
         & ul{
-            transform: translateX(800px);
-            width: 30%;
-
+            transform: translateX(400px);
+            width: 30%;           
         }
+    }
         & .Navbar__btn_open{
             & img{
                 width:30px;
@@ -100,3 +115,60 @@ header{
     }
 
 }
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+    header{
+        height: 15vh;
+        background-color: var(--white-color);
+        & nav{
+        grid-template-columns: 15% 85%;
+            & .Navbar__marca{
+                & figure{
+                    width: 80px;
+                    height: 80px;
+                    margin: 0;
+                }
+            }
+            & ul{
+                background-color: var(--white-color);
+                position: relative;
+                width: 100%;
+                height: auto;
+                padding: 0;
+                flex-direction: row;
+                transform: none;
+                justify-content: center;
+                align-items: center;
+                & li{
+                    padding: 15px;
+                    transition: all .3s;
+                    margin:0;
+                    & a{
+                        color: var(--black-color);
+                    }
+                    &:hover{
+                        border-bottom: 1px solid var(--black-color);
+                    }
+                } 
+            }
+            & .Navbar__btn_close{
+                display: none;
+            }
+        }
+        & .Navbar__btn_open{
+            display: none;
+        }
+        & .SocialNetwork{
+            position: absolute;
+            right: 20px;
+            & img{
+                width: 20px;
+                height: 20px;
+                padding: var(--spacing_small);
+            }
+        }
+    }
+
+}
+

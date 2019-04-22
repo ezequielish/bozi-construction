@@ -63,3 +63,38 @@
     }
 
 }
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+    .Services{
+        justify-content: center;
+        align-items: center;         
+        display: flex;
+        flex-direction: column;
+      & .Services__description{
+            width: 80%;
+            margin: calc(var(--spacing_large) * 2);
+      }
+      & .Services__category{
+          justify-content: center;
+          align-items: center;
+          display: flex;
+        & .Services__category_items{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: all .4s;
+            background-color: var(--white-color);
+            cursor: pointer; 
+            width: 50%;
+            & figure{
+                margin:0;
+                width: 30%;
+                height: 30%;
+                cursor: pointer;                
+                }
+            }
+        }
+    }
+}
