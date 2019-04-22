@@ -10,7 +10,8 @@
     & .Hero__title{
         /* border: solid red 1px; */
         width: 100%;
-        z-index: 1;
+        /* z-index: 1; */
+        position: absolute;
         text-align:center;
         padding: var(--spacing_large);
         color : var(--white-color);
@@ -39,7 +40,7 @@
         position: absolute;
         height: 100%;
         width: 100%;
-        /* border:solid blueviolet 1px; */
+        z-index: -1;
         background-color : black; 
         & .slider-item{  
             opacity: .6;            
@@ -50,30 +51,31 @@
                 opacity: 0;
                 position: absolute;
                 will-change: transform,opacity;
-                transform: scale(2.5);
+                /* transform: scale(2.5); */
                 
             }         
         }
-        & .Hero__items_icon{
-            /* border: solid 1px black; */
-            justify-content: center;
-            display: flex;
-            align-items: center;
-            position: absolute;
-            width: 100%;
-            bottom: 0;
-            text-align: center;
-            & .Hero__circle_carrusel{
-                /* background-color: var(--white-color); */
-                border: solid 1px white; 
-                width:15px;
-                height: 15px;
-                margin: var(--spacing_medium);
-                border-radius: 50%;
-                color: var(--white-color);
-                transition: all 1s;
-                cursor: pointer;
-            }
+
+    }
+    & .Hero__items_icon{
+        /* border: solid 1px black; */
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        text-align: center;
+        & .Hero__circle_carrusel{
+            /* background-color: var(--white-color); */
+            border: solid 1px white; 
+            width:15px;
+            height: 15px;
+            margin: var(--spacing_medium);
+            border-radius: 50%;
+            color: var(--white-color);
+            transition: all 1s;
+            cursor: pointer;
         }
     }
 }
@@ -84,4 +86,22 @@
 }
 .active_carrusel_img{
     opacity: 1;
+}
+
+/* TABLET */
+@media (min-width: 600px) {
+    .Hero{
+        
+        & .Hero__title{
+            & p{
+                font-size: 1.2em;
+            }
+            & .btn-primary{
+                font-size: 1em;
+                margin-top: calc(var(--spacing_large) * 2);  
+
+            }
+        }
+    }
+
 }

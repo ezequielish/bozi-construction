@@ -6,18 +6,13 @@ import React, { Component } from 'react';
 // import final from '../assets/img/icons/methodology/final.svg';
 import methodologyImg from '../assets/img/methodology.jpg';
 import ItemsMethodology from './ItemsMethodology';
+import { fade } from '../assets/js/effects';
 class Methodology extends Component {
 
     componentDidMount() {
         window.addEventListener('scroll', () => {
             let element = document.querySelectorAll('.Methodology__items');
-            element.forEach(i => {
-                let animate = i.offsetTop - 400;
-                if (animate < scrollY) {
-                    i.setAttribute('style', 'transform:translateY(0px); transition:1s; opacity: 1')
-                }
-            })
-
+            fade(element)
 
         })
     }

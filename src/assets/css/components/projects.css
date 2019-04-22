@@ -66,3 +66,18 @@
 
 }
 
+
+/* TABLET */
+@media (min-width: 600px) {
+    .Projects{
+        margin-bottom: calc(var(--spacing_large) * 2);
+        & .Projects__items{
+            height: 600px;
+            & .items-card{
+                & .items-img{
+                    height: 600px;
+                }
+            }
+        }
+    }  
+}

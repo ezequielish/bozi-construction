@@ -12,7 +12,7 @@ class ContactContainer extends Component {
                     <h3>Brindamos toda la información que necesitas saber.</h3>
 
                     <div className='description-info'>
-                        <p><img src={whatsapp} width='20px' height='20px' /> +34 666378709</p>
+                        <p><img src={whatsapp} width='20px' height='20px' /> +34 666 378 709</p>
                         <p><img src={email} width='20px' height='20px' /> bozicontruccionesreformas@gmail.com</p>
                         <p><img src={mapa} width='20px' height='20px' /><img /> Valencia, España.</p>
                     </div>

@@ -28,3 +28,12 @@
         }
     }
 }
+
+
+/* TABLET */
+@media (min-width: 600px) {
+    .About{
+        font-size: 1.2em;
+    }
+}
+    

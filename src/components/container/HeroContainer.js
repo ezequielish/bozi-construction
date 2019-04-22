@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import HeroLayout from '../Hero';
-
 import { CSSTransition } from 'react-transition-group';
 import { inizialitedCarrusel, change } from '../../assets/js/carrusel';
 class HeroContainer extends Component {
@@ -90,14 +89,15 @@ class HeroContainer extends Component {
                         })
                     }
 
-                    <div className='Hero__items_icon'>
-                        {
-                            imgPortada.map((i, index) => {// 
-                                return (<div data-circle={index} className='Hero__circle_carrusel' onClick={this.moveCarrusel.bind(this)}>.</div>)
-                            })
-                        }
 
-                    </div>
+                </div>
+                <div className='Hero__items_icon'>
+                    {
+                        imgPortada.map((i, index) => {// 
+                            return (<div data-circle={index} className='Hero__circle_carrusel' onClick={this.moveCarrusel.bind(this)}></div>)
+                        })
+                    }
+
                 </div>
             </HeroLayout>
         )

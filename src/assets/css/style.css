@@ -16,3 +16,8 @@ body{
 section{
     margin-bottom: var(--spacing_large);
 }
+@media (min-width: 600px) {
+    body{
+        font-size: 1.5em;
+    }
+  }

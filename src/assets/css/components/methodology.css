@@ -45,3 +45,20 @@
 
 }
 
+/* TABLET */
+@media (min-width: 600px) {
+    .Methodology{
+
+        & .Methodology__level{
+            & .Methodology__items{
+                & .Methodology__items_circle{
+
+                    width: 75px;
+                    height: 75px;
+                } 
+            }
+        }
+    
+    }
+
+}

@@ -5,7 +5,7 @@ header{
     position: fixed;
     z-index: 2;
     width: 100%;
-    background-color: var(--white-color);
+    background-color: #e8e3e34f;
     justify-content: center;
     align-items: center;
         & .Navbar__marca{
@@ -20,13 +20,83 @@ header{
         }
     }
     & ul{
-        display: none;
+        background: var(--black-color);
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        margin: 0;
+        right: 0;
+        width: 50%;
+        display: flex;
+        transform: translateX(380px);
+        flex-direction: column;
+        border:solid black 1px;
+        padding: calc(var(--spacing_large) + var(--spacing_large));
+        & li{
+            list-style: none;
+            margin-top: 25px;
+            & a{
+                color:white;
+                text-decoration: none;
+                font-size: 1.2em;
+            }
+        }
+        & .Navbar__btn_close{
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding: var(--spacing_large);
+            cursor: pointer;
+            & img{
+                will-change: transform;
+                transition: all .8s;
+                &:hover{
+                    transform: rotate(180deg);
+                } 
+            }
+
+        }
+
     }
-    & .Navbar__btn_menu{
-        /* display: none; */
-        /* border:solid red 1px; */
+    & .Navbar__btn_open{
+        cursor: pointer;
         position: absolute;
         right: 0;
         margin: var(--spacing_large);
+        z-index: -1;
+        & img{
+            width:20px;
+            height: 20px;  
+        }
+
     }
+}
+
+/* TABLET */
+@media (min-width: 600px) {
+    header{
+        height: 20vh;
+        & .Navbar__marca{
+
+            & figure{
+
+                width: 130px;
+                height: 130px;
+                margin: 0;
+            }
+        }
+        & ul{
+            transform: translateX(800px);
+            width: 30%;
+
+        }
+        & .Navbar__btn_open{
+            & img{
+                width:30px;
+                height: 30px;  
+            }
+    
+        }
+    }
+
 }
