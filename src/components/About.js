@@ -7,14 +7,14 @@ const About = (props) => {
             <div className='About__level'>
                 <div className='About__image'>
                     <figure>
-                        <div className='figure-decorator'></div>
+                        <div className='About__image_decorator'></div>
                         <img src={aboutImg} className='about-img' />
                     </figure>
                 </div>
                 <div className="About__description">
                     <h3>SERVICIO DE CALIDAD</h3>
                     <p>
-                        Bozi Construcciones y Reformas, cuenta con una amplia experiencia en el sector de la construcción, lo que le ha permitido especializarse en todo tipo de trabajos de Construcción especializándonos sobre todo en reformas integrales de vivienda y reformas.
+                        <strong>Bozi Construcciones y Reformas</strong>, cuenta con una amplia experiencia en el sector de la construcción, lo que le ha permitido especializarse en todo tipo de trabajos de Construcción especializándonos sobre todo en reformas integrales de vivienda y reformas.
                     </p>
                     <p>
                         Cubrimos todas las fases y necesidades de un proyecto, desde las reparaciones pequeñas hasta la construcción integral con entrega de llave en mano, un equipo multidisciplinario de profesionales con amplia experiencia en construcción, reparación, conservación y decoración de toda clase de edificios y locales. Un equipo que ha trabajado para clientes emblemáticos y con un alto grado de exigencia en la calidad del trabajo, los plazos y el compromiso.

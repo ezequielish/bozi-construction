@@ -37,3 +37,50 @@
     }
 }
     
+
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+    .About{
+        display: grid;
+        grid-template-rows: 20% 80%;
+        padding: var(--spacing_large);
+        & .About__level{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            & p{
+                text-align: left;
+            }
+            & h3{
+                color: var(--red_btn);
+            }
+            & .About__image{
+                display: flex;
+                justify-content:center;
+                align-items:flex-start;
+                & figure{
+                   position: relative;
+                   margin: 0;
+                   height: 400px;
+                   width: 70%;
+                   display: flex;
+                   justify-content:center;
+                   overflow: visible;
+                   & img{
+                       width: 100%;
+                       height: 100%;
+                       transform: none;
+                       box-shadow: -1px 38px 45px -32px rgba(92,92,92,1);
+                   }
+                   & .About__image_decorator{
+                       background-color: var(--red_btn);
+                       height: 5px;
+                       width: 60%;
+                       position: absolute;
+                       top: -5px;
+                   }
+                 }
+             }
+        }
+    }
+}

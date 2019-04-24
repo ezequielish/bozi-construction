@@ -24,7 +24,7 @@ class Methodology extends Component {
             <section className='Methodology'>
                 <div className='Methodology__image'>
                     <figure>
-                        <div className='About__figure-decorator'></div>
+                        <div className='Methodology__image_decorator'></div>
                         <img src={methodologyImg} />
                     </figure>
                 </div>
