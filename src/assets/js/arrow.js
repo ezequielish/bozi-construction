@@ -36,7 +36,7 @@ setTimeout(() => {
 
     $arrows.forEach(element => {
         if ($items_container.scrollWidth == $items_container.clientWidth) {
-            element.style.display = 'none';
+            element.style.display = 'none'; // si hay pocos items no se ven las flechas
         }
         startState()
         element.addEventListener('click', (ev) => {
@@ -53,4 +53,4 @@ setTimeout(() => {
         })
     });
 
-}, 200);
+}, 100);
