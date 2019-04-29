@@ -1,30 +1,45 @@
 import React, { Component } from 'react';
 import Services from '../Services';
+import { Link } from 'react-router-dom';
 import service_1 from '../../assets/img/icons/services_category/reforma.svg';
 import service_2 from '../../assets/img/icons/services_category/pintura.svg';
 import service_3 from '../../assets/img/icons/services_category/fachada.svg';
 import service_4 from '../../assets/img/icons/services_category/bajante.svg';
+import service_5 from '../../assets/img/icons/services_category/cerrajeria.svg';
 import { CSSTransition } from 'react-transition-group';
-let html = document.querySelector('html')
 class ServicesContainer extends Component {
     state = {
         carrusel: false,
         items: [
             {
                 img: service_1,
-                description: 'Reformas'
+                description: 'Reformas',
+                tag: "reforma",
+                _id: 1
             },
             {
                 img: service_2,
-                description: 'Pinturas'
+                description: 'Pinturas',
+                tag: "pintura",
+                _id: 2
             },
             {
                 img: service_3,
-                description: 'Fachadas'
+                description: 'Fachadas',
+                tag: "fachada",
+                _id: 3
             },
             {
                 img: service_4,
-                description: 'Bajantes'
+                description: 'Bajantes',
+                tag: "bajantes",
+                _id: 4
+            },
+            {
+                img: service_5,
+                description: 'Cerrajeria',
+                tag: "cerrajeria",
+                _id: 5
             }
         ]
     }
@@ -49,15 +64,18 @@ class ServicesContainer extends Component {
                     {
                         this.state.items.map(i => {
                             return (
-
-                                <div className='Services__category_items' onScroll={this.jeje}>
-                                    <figure>
-                                        <img src={i.img} width='100%' height='100%' />
-                                    </figure>
-                                    <div className='Services__category_items_title'>
-                                        <h3>{i.description}</h3>
+                                <Link to={{
+                                    pathname: `/servicios/${i.tag}`
+                                }}>
+                                    <div className='Services__category_items' >
+                                        <figure>
+                                            <img src={i.img} width='100%' height='100%' />
+                                        </figure>
+                                        <div className='Services__category_items_title'>
+                                            <h3>{i.description}</h3>
+                                        </div>
                                     </div>
-                                </div>
+                                </Link>
                             )
                         })
                     }

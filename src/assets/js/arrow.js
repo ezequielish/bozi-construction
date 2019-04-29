@@ -1,6 +1,6 @@
-setTimeout(() => {
-    let $items_container = document.querySelector('.Projects__items');
-    let $arrows = document.querySelectorAll('.arrow');
+function arrow(container, arrow) {
+    let $items_container = container;
+    let $arrows = arrow;
 
     let jumps = 0;
     let jumpsMax = Math.ceil($items_container.scrollWidth / $items_container.clientWidth); //cantidad(n) max. que podemos avanazar
@@ -53,4 +53,9 @@ setTimeout(() => {
         })
     });
 
-}, 100);
+
+}
+
+module.exports = {
+    arrow
+}

@@ -6,7 +6,7 @@
 @import './components/projects.css';
 @import './components/contact.css';
 @import './components/footer.css';
-@import './components//animaciones.css';
+@import './components/animaciones.css';
 body{
     background: var(--white-color);
     font-size: 1em;

@@ -1,8 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Home from './pages/Home';
-import './assets/css/style.css';
-const app = document.getElementById('app');
-console.log(63)
+import { BrowserRouter } from 'react-router-dom';
+import App from './app';
 
-ReactDOM.render(<Home />, app);
+const app = document.getElementById('app');
+
+
+ReactDOM.render(
+    <BrowserRouter>
+        <App />
+    </BrowserRouter>
+    , app);

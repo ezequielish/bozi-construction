@@ -5,14 +5,27 @@ import imgwp2 from '../../assets/img/wp/wp-3.jpeg';
 import star from '../../assets/img/icons/star.svg';
 import arrowLeft from '../../assets/img/icons/arrow-left.svg';
 import arrowRight from '../../assets/img/icons/arrow-right.svg';
-import '../../assets/js/arrow';
+import { arrow } from '../../assets/js/arrow';
 class ProjectsContainer extends Component {
+    constructor(props) {
+        super(props)
+        this.projectsRef = React.createRef();
+        this.arrowsRef = React.createRef();
+    }
+
+    componentDidMount() {
+        const projectsItems = this.projectsRef.current;
+        const arrowItems = this.arrowsRef.current;
+        arrow(projectsItems.childNodes, arrowItems.childNodes);
+
+    }
+
 
     render() {
         return (
             <Projects>
                 <h1>Últimos Trabajos</h1>
-                <div className='Projects__items'>
+                <div className='Projects__items' ref={this.projectsRef} >
 
                     <div className='Projects__items_card'>
                         <figure className='Projects__items_card_img'>
@@ -59,7 +72,7 @@ class ProjectsContainer extends Component {
                     </div>
 
                 </div>
-                <div className="arrows">
+                <div className="arrows" ref={this.arrowsRef} >
                     <img src={arrowLeft} className="arrow" width="30px" height="30px" data-arrow="left" />
                     <img src={arrowRight} className="arrow" width="30px" height="30px" data-arrow="right" />
                 </div>

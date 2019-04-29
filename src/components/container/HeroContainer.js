@@ -3,7 +3,11 @@ import HeroLayout from '../Hero';
 import { CSSTransition } from 'react-transition-group';
 import { inizialitedCarrusel, change } from '../../assets/js/carrusel';
 class HeroContainer extends Component {
-
+    constructor(props) {
+        super(props)
+        this.sliderImg = []
+        this.circleCarrousel = []
+    }
     state = {
         carrusel: false,
         countPortada: 0,
@@ -11,8 +15,8 @@ class HeroContainer extends Component {
     }
 
     moveCarrusel(btn) {
-        let itemImg = document.querySelectorAll('.slider-item img');
-        let circlesCarrusel = document.querySelectorAll('.Hero__circle_carrusel'); //circle btn carrusel
+        let itemImg = this.sliderImg;
+        let circlesCarrusel = this.circleCarrousel; //circle btn carrusel
         clearInterval(this.state.turns);
         if (btn.target.dataset.circle == this.state.countPortada) {
             return
@@ -33,8 +37,8 @@ class HeroContainer extends Component {
 
     }
     componentDidMount() {
-        let itemImg = document.querySelectorAll('.slider-item img');
-        let circlesCarrusel = document.querySelectorAll('.Hero__circle_carrusel'); //circle btn carrusel
+        let itemImg = this.sliderImg;
+        let circlesCarrusel = this.circleCarrousel; //circle btn carrusel
 
         inizialitedCarrusel(itemImg, circlesCarrusel, this.state.countPortada)
 
@@ -64,7 +68,9 @@ class HeroContainer extends Component {
     }
 
 
-
+    componentWillUnmount() {
+        clearInterval(this.state.turns);
+    }
     render() {
         const { data: imgPortada } = this.props
 
@@ -74,14 +80,14 @@ class HeroContainer extends Component {
                     <h1>CONSTRUCCIONES Y REFORMAS</h1>
                     <h2>Transformamos tus Diseños en Realidad</h2>
                     <p>Los diseños más modernos a tu alcance con los materiales de la mejor calidad</p>
-                    <button className='btn-primary'>PEDIR PRESUPUESTO</button>
+                    <button className='btn_primary'>PEDIR PRESUPUESTO</button>
                 </div>
-                <div className='Hero__slider'>
+                <div className='Hero__slider'   >
                     {
                         imgPortada.map((i, index) => {
                             return (
-                                <div className='slider-item' key={index}>
-                                    <img src={i.url} width='100%' height='100%' alt={i.alt} />
+                                <div className='slider_item' key={index} >
+                                    <img src={i.url} width='100%' height='100%' alt={i.alt} ref={itemImg => this.sliderImg[index] = itemImg} />
                                 </div>
                             )
                         })
@@ -89,10 +95,17 @@ class HeroContainer extends Component {
 
 
                 </div>
-                <div className='Hero__items_icon'>
+                <div className='Hero__items_icon' >
                     {
                         imgPortada.map((i, index) => {// 
-                            return (<div data-circle={index} className='Hero__circle_carrusel' onClick={this.moveCarrusel.bind(this)}></div>)
+                            return (
+                                <div
+                                    data-circle={index}
+                                    className='Hero__circle_carrusel'
+                                    ref={itemCarrousel => this.circleCarrousel[index] = itemCarrousel}
+                                    onClick={this.moveCarrusel.bind(this)}
+                                >
+                                </div>)
                         })
                     }
 

@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
-import Layout from '../components/Layout';
+import React, { Component, Fragment } from 'react';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 import HeroContainer from '../components/container/HeroContainer';
 import ServicesContainer from '../components/container/ServicesContainer';
 import About from '../components/About';
@@ -7,18 +8,20 @@ import Methodology from '../components/Methodology';
 import ProjectsContainer from '../components/container/ProjectsContainer';
 import ContactContainer from '../components/container/ContactContainer';
 import data from '../data/app';
-// console.log(data.portadas)
+
 class Home extends Component {
     render() {
         return (
-            <Layout>
+            <Fragment>
+                <Header />
                 <HeroContainer data={data.portadas} />
                 <ServicesContainer />
                 <About />
                 <Methodology data={data.methodology} />
                 <ProjectsContainer />
                 <ContactContainer />
-            </Layout>
+                <Footer />
+            </ Fragment>
         )
     }
 }

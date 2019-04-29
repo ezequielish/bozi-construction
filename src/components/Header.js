@@ -6,9 +6,20 @@ import '../assets/css/components/header.css';
 import { CSSTransition } from 'react-transition-group';
 import { backgroundEffect } from '../assets/js/effects';
 import SocialNetwork from './SocialNetwork';
+import { NavLink } from 'react-router-dom';
 class Header extends Component {
     state = {
         menuSwitch: false
+    }
+    oddEvent = (e) => {
+        let section = e.target.dataset.section;
+        let sectionScroll = document.querySelector(`.${section}`);
+        window.scrollTo({
+            'behavior': 'smooth',
+            'left': 0,
+            'top': sectionScroll.offsetTop
+        });
+
     }
     componentDidMount() {
         window.addEventListener('scroll', () => {
@@ -22,7 +33,6 @@ class Header extends Component {
     }
     handleMenuToggle() {
         this.setState({ menuSwitch: !this.state.menuSwitch })
-        console.log(this.state.menuSwitch)
     }
     render() {
         return (
@@ -40,16 +50,19 @@ class Header extends Component {
                                 <span><img width='20px' height='20px' src={btnClose} alt='boton open' /></span>
                             </div>
                             <li>
-                                <a href="javascript:void(0)">Home</a>
+                                <NavLink to="/" >Home</NavLink>
                             </li>
                             <li>
-                                <a href="javascript:void(0)">Servicios</a>
+                                <NavLink to="/" onClick={this.oddEvent} data-section="Services" >Servicios</NavLink>
                             </li>
                             <li>
-                                <a href="javascript:void(0)">Nosotros</a>
+                                <NavLink to="/" onClick={this.oddEvent} data-section="About">Nosotros</NavLink>
                             </li>
                             <li>
-                                <a href="javascript:void(0)">Contactanos</a>
+                                <NavLink to="/" onClick={this.oddEvent} data-section="Projects">Projectos</NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/" onClick={this.oddEvent} data-section="Contact">Contacto</NavLink>
                             </li>
                             <li>
                                 <input type="search" placeholder="Buscar..." />

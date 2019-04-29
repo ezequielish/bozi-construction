@@ -91,3 +91,29 @@
         }
     }  
 }
+
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+    .Contact{
+        display: grid;
+        grid-template-rows: 20% 80%;
+        grid-template-columns: repeat(2,1fr);
+
+        & h1{
+            grid-column: 1 / span 2;
+        }
+
+        & .Contact__description{
+            justify-content: center;
+            align-items: flex-start;
+            display: flex;
+            flex-direction: column;
+            padding: var(--spacing_large);
+            & .description-info{
+                text-align: left;
+            }
+        }
+    }
+}
+

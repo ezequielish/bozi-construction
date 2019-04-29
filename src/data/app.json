@@ -57,5 +57,47 @@
             "img": "./src/assets/img/icons/methodology/final.svg",
             "_id": 5
         }
+    ],
+    "services": [
+        {
+            "_id": 1,
+            "name": "Reformas"
+        },
+        {
+            "_id": 2,
+            "name": "Pinturas"
+        },
+        {
+            "_id": 3,
+            "name": "Fachadas"
+        },
+        {
+            "_id": 4,
+            "name": "Bajantes"
+        },
+        {
+            "_id": 5,
+            "name": "Cerrajeria"
+        }
+    ],
+    "projects": [
+        {
+            "name": "Reforma",
+            "img": "./src/assets/img/wp/wp.jpeg",
+            "voteclient": "5",
+            "category": [
+                1
+            ],
+            "_id": 1
+        },
+        {
+            "name": "Pintura",
+            "img": "./src/assets/img/wp/wp-3.jpeg",
+            "voteclient": "5",
+            "category": [
+                2
+            ],
+            "_id": 2
+        }
     ]
 }

@@ -2,31 +2,31 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const devMode = process.env.NODE_ENV !== 'production';
+
 const config = {
     entry: {
-        app: path.resolve(__dirname, 'src/index.js')
+        app: path.resolve(__dirname, 'src/app.js')
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: "bundle.js",
+        filename: 'ssr/[name].js',
+        publicPath: "/",
+        libraryTarget: 'commonjs2'
     },
-    devServer: {
-
-        port: 9000
-    },
+    target: 'node',
     module: {
         rules: [
 
             {
                 test: /\.(css)$/,
                 use: [
-                    MiniCssExtractPlugin.loader,//"style-loader" creates style nodes from JS strings
+                    MiniCssExtractPlugin.loader,//"style-loader"
                     {
-                        loader: 'css-loader',
+                        loader: "css-loader",
                         options: {
                             importLoaders: 1,
                         }
-                    },// translates CSS into CommonJS |
+                    },
                     {
                         loader: 'postcss-loader',
                         options: {
@@ -62,7 +62,7 @@ const config = {
                 ]
             },
             {
-                test: /\.m?js$/,
+                test: /\.(js|jsx)$/,
                 exclude: /(node_modules|bower_components)/,
                 use: {
                     loader: 'babel-loader',
@@ -76,9 +76,6 @@ const config = {
     },
 
     plugins: [
-        new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, 'src/index.html')
-        }),
         new MiniCssExtractPlugin({
             filename: devMode ? 'css/[name].css' : 'css/[name].[hash].css',
             chunkFilename: devMode ? 'css/[id].css' : 'css/[id].[hash].css',

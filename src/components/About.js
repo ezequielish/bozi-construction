@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import aboutImg from '../assets/img/about.jpg';
 const About = (props) => {
     return (
