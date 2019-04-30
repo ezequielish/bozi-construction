@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import HeroLayout from '../Hero';
-import { CSSTransition } from 'react-transition-group';
+import { fade } from '../../assets/js/effects'
 import { inizialitedCarrusel, change } from '../../assets/js/carrusel';
 class HeroContainer extends Component {
     constructor(props) {
@@ -11,9 +11,19 @@ class HeroContainer extends Component {
     state = {
         carrusel: false,
         countPortada: 0,
-        turns: null
-    }
+        turns: null,
 
+    }
+    oddEvent = (e) => {
+        let section = e.target.dataset.section;
+        let sectionScroll = document.querySelector(`.${section}`);
+        window.scrollTo({
+            'behavior': 'smooth',
+            'left': 0,
+            'top': sectionScroll.offsetTop
+        });
+
+    }
     moveCarrusel(btn) {
         let itemImg = this.sliderImg;
         let circlesCarrusel = this.circleCarrousel; //circle btn carrusel
@@ -41,7 +51,6 @@ class HeroContainer extends Component {
         let circlesCarrusel = this.circleCarrousel; //circle btn carrusel
 
         inizialitedCarrusel(itemImg, circlesCarrusel, this.state.countPortada)
-
         let count = 0;
         this.setState({
             turns: setInterval(() => {
@@ -76,11 +85,11 @@ class HeroContainer extends Component {
 
         return (
             <HeroLayout>
-                <div className="Hero__title">
+                <div className="Hero__title" >
                     <h1>CONSTRUCCIONES Y REFORMAS</h1>
                     <h2>Transformamos tus Diseños en Realidad</h2>
                     <p>Los diseños más modernos a tu alcance con los materiales de la mejor calidad</p>
-                    <button className='btn_primary'>PEDIR PRESUPUESTO</button>
+                    <button className='btn_primary' onClick={this.oddEvent} data-section="Contact" >PEDIR PRESUPUESTO</button>
                 </div>
                 <div className='Hero__slider'   >
                     {
@@ -104,6 +113,7 @@ class HeroContainer extends Component {
                                     className='Hero__circle_carrusel'
                                     ref={itemCarrousel => this.circleCarrousel[index] = itemCarrousel}
                                     onClick={this.moveCarrusel.bind(this)}
+                                    key={index}
                                 >
                                 </div>)
                         })

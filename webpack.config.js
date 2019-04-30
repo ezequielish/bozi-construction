@@ -8,12 +8,14 @@ const config = {
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
+        publicPath: "/",
         filename: "bundle.js",
     },
     devServer: {
 
         port: 9000
     },
+
     module: {
         rules: [
 
@@ -32,7 +34,7 @@ const config = {
                         options: {
                             ident: 'postcss',
                             plugins: (loader) => [
-                                require('postcss-import')({ root: loader.resourcePath }),
+                                require('postcss-import')({options: { sourceMap: true }}),
                                 require('postcss-nesting'),
                                 require('postcss-apply'),
                                 require('postcss-custom-media')({
@@ -51,7 +53,7 @@ const config = {
                     options: {
                         limit: 10000,
                         fallback: 'file-loader',
-                        name: devMode ? 'img/[name].[ext]' : 'images/[name].[hash].[ext]',
+                        name: devMode ? 'img/[name].[ext]' : 'img/[name].[hash].[ext]',
                     }
                 }
             },

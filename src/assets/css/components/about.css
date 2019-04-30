@@ -13,6 +13,8 @@
     }
     & .About__description{
         padding: var(--spacing_medium);
+        transform: translateY(-15px);
+        opacity: 0;
     }
     & .About__image{
        & figure{

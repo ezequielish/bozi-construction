@@ -1,60 +1,60 @@
 {
     "menu": [
         {
-            "title": "Nuestros servicios",
-            "href": ""
+            "title": "Servicios",
+            "href": "Services"
         },
         {
             "title": "Nosotros",
-            "href": ""
+            "href": "About"
         },
         {
             "title": "Proyectos",
-            "href": ""
+            "href": "Projects"
         },
         {
             "title": "Contactanos",
-            "href": ""
+            "href": "Contact"
         }
     ],
     "portadas": [
         {
             "alt": "cocina reforma",
-            "url": "./src/assets/img/backgrounds/img-1.jpg"
+            "url": "./img/img-1.jpg"
         },
         {
             "alt": "cocina reforma",
-            "url": "./src/assets/img/backgrounds/img-2.jpg"
+            "url": "./img/img-2.jpg"
         },
         {
             "alt": "baño reforma",
-            "url": "./src/assets/img/backgrounds/img-3.jpg"
+            "url": "./img/img-3.jpg"
         }
     ],
     "methodology": [
         {
             "description": "CONTACTO Y PRESENTACIÓN",
-            "img": "./src/assets/img/icons/methodology/contact.svg",
+            "img": "./img/contact.svg",
             "_id": 1
         },
         {
             "description": "VISITA Y MEDICIÓN | APUNTES DE DATOS",
-            "img": "./src/assets/img/icons/methodology/medicion.svg",
+            "img": "./img/medicion.svg",
             "_id": 2
         },
         {
             "description": "PROPUESTA DISTRIBUCIÓN + PRESUPUESTO",
-            "img": "./src/assets/img/icons/methodology/distribucion.svg",
+            "img": "./img/distribucion.svg",
             "_id": 3
         },
         {
             "description": "PROYECTO | PROPUESTA DE MOBILIARIO Y ACABADOS",
-            "img": "./src/assets/img/icons/methodology/mobiliario.svg",
+            "img": "./img/mobiliario.svg",
             "_id": 4
         },
         {
             "description": "FINALIZACIÓN DEL PROYECTO",
-            "img": "./src/assets/img/icons/methodology/final.svg",
+            "img": "./img/final.svg",
             "_id": 5
         }
     ],

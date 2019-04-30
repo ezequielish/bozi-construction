@@ -1,14 +1,24 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import ContactContainer from '../components/container/ContactContainer';
+import data from '../data/app';
+import services from '../data/services';
+import HeroServices from '../components/container/HeroServices'
 
 class Services extends Component {
 
     render() {
-        console.log(this.props.match.params.id)
+        let tagUrl = this.props.match.params.id
+        const { services:servicios } = services
+        let thisService = servicios.filter(service => service.tag == tagUrl)
         return (
-            <div>
-                Soy un servicio <h1>{this.props.match.params.id}</h1>
-            </div>
-
+            <Fragment>
+                 <Header data={data.menu} />
+                    <HeroServices data={thisService} />
+                    <ContactContainer />
+                <Footer />
+            </Fragment>
         )
     }
 

@@ -13,7 +13,7 @@ class Home extends Component {
     render() {
         return (
             <Fragment>
-                <Header />
+                <Header data={data.menu} />
                 <HeroContainer data={data.portadas} />
                 <ServicesContainer />
                 <About />

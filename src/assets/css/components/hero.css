@@ -103,7 +103,7 @@
             & p{
                 font-size: 1.2em;
             }
-            & .btn-primary{
+            & .btn_primary{
                 font-size: 1em;
                 margin-top: calc(var(--spacing_large) * 2);  
 
@@ -121,10 +121,11 @@
             & h1{
                 font-size: 1.8em;
             }
-            & .btn-primary{
-                width: 30%;
+            & .btn_primary{
+                width: 40%;
 
             }
         }
     }
 }
+

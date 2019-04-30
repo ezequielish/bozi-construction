@@ -1,5 +1,4 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const devMode = process.env.NODE_ENV !== 'production';
 
@@ -14,6 +13,9 @@ const config = {
         libraryTarget: 'commonjs2'
     },
     target: 'node',
+    devServer: {
+        port: 9000,
+    },
     module: {
         rules: [
 
@@ -32,7 +34,7 @@ const config = {
                         options: {
                             ident: 'postcss',
                             plugins: (loader) => [
-                                require('postcss-import')({ root: loader.resourcePath }),
+                                require('postcss-import')({ options: { sourceMap: true } }),
                                 require('postcss-nesting'),
                                 require('postcss-apply'),
                                 require('postcss-custom-media')({
@@ -51,7 +53,7 @@ const config = {
                     options: {
                         limit: 10000,
                         fallback: 'file-loader',
-                        name: devMode ? 'img/[name].[ext]' : 'images/[name].[hash].[ext]',
+                        name: devMode ? 'img/[name].[ext]' : 'img/[name].[hash].[ext]',
                     }
                 }
             },

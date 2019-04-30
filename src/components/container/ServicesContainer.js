@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
 import Services from '../Services';
+import { fadeElement, fade } from '../../assets/js/effects'
 import { Link } from 'react-router-dom';
 import service_1 from '../../assets/img/icons/services_category/reforma.svg';
 import service_2 from '../../assets/img/icons/services_category/pintura.svg';
 import service_3 from '../../assets/img/icons/services_category/fachada.svg';
 import service_4 from '../../assets/img/icons/services_category/bajante.svg';
 import service_5 from '../../assets/img/icons/services_category/cerrajeria.svg';
-import { CSSTransition } from 'react-transition-group';
 class ServicesContainer extends Component {
+    constructor(prosp) {
+        super(prosp)
+        this.servicesContainer = null
+        this.setServicesContainer = element => {
+            this.servicesContainer = element
+        }
+    }
     state = {
         carrusel: false,
         items: [
@@ -44,13 +51,21 @@ class ServicesContainer extends Component {
         ]
     }
 
+    componentDidMount() {
+        let w = window;
 
-
+        w.addEventListener('scroll', () => {
+            
+            if(this.servicesContainer){
+                fadeElement(this.servicesContainer)
+            }
+        })
+    }
     render() {
         return (
-            <Services>
-                <h1>Nuestro Servicios</h1>
-                <div className='Services__description'>
+            <Services >
+                <h1 >Nuestro Servicios</h1>
+                <div className='Services__description' ref={this.setServicesContainer}>
                     <p>
                         Si necesita que su proyecto de construcción, ya sea de vivienda, empresa o cualquier reforma tenga un alto nivel, con el acabado de mejor calidad necesita un equipo profesional y una solución individualizada.
                     </p>
@@ -66,7 +81,9 @@ class ServicesContainer extends Component {
                             return (
                                 <Link to={{
                                     pathname: `/servicios/${i.tag}`
-                                }}>
+                                }}
+                                    key={i._id}
+                                >
                                     <div className='Services__category_items' >
                                         <figure>
                                             <img src={i.img} width='100%' height='100%' />

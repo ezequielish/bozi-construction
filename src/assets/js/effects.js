@@ -7,6 +7,16 @@ function fade(element) {
         }
     })
 }
+function fadeElement(element) {
+    // console.log(element)
+
+    let animate = element.offsetTop - 600;
+    // console.log(element.offsetTop, scrollY, animate)
+    if (animate < scrollY) {
+        element.setAttribute('style', 'transform:translateY(0px); transition:1s; opacity: 1');
+    }
+
+}
 //(element,elementTwo,transparant, painted)
 //example backgroundEffect(element,elementTwo,1,0) active transparency
 //example backgroundEffect(element,elementTwo,0,1) active painted
@@ -14,18 +24,22 @@ function fade(element) {
 function backgroundEffect(element, elementTwo, transp, pint) {
     if (pint) {
 
-        let animate = elementTwo.offsetTop - 200;
-        if (animate < scrollY) {
-            element.setAttribute('style', 'background-color:#ffffff;  transition:.8s;');
-        } else {
-            element.setAttribute('style', 'background-color:#e8e3e34f;  transition:.8s;');
+        if(element && elementTwo){
+            let animate = elementTwo.offsetTop - 200;
+            if (animate < scrollY) {
+                element.setAttribute('style', 'background-color:#ffffff;  transition:.8s;');
+            } else {
+                element.setAttribute('style', 'background-color:#e8e3e34f;  transition:.8s;');
 
+            }  
         }
+
     }
 }
 module.exports = {
     fade,
-    backgroundEffect
+    backgroundEffect,
+    fadeElement
 
 }
 

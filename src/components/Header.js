@@ -35,6 +35,9 @@ class Header extends Component {
         this.setState({ menuSwitch: !this.state.menuSwitch })
     }
     render() {
+
+        const { data: menu } = this.props
+
         return (
             <header>
                 <nav>
@@ -50,20 +53,18 @@ class Header extends Component {
                                 <span><img width='20px' height='20px' src={btnClose} alt='boton open' /></span>
                             </div>
                             <li>
-                                <NavLink to="/" >Home</NavLink>
+                                <NavLink to="/" >Inicio</NavLink>
                             </li>
-                            <li>
-                                <NavLink to="/" onClick={this.oddEvent} data-section="Services" >Servicios</NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="/" onClick={this.oddEvent} data-section="About">Nosotros</NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="/" onClick={this.oddEvent} data-section="Projects">Projectos</NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="/" onClick={this.oddEvent} data-section="Contact">Contacto</NavLink>
-                            </li>
+
+                            {
+                                menu.map((menuLi, index) => {
+                                    return (
+                                        <li key={index} >
+                                            <NavLink to="/" onClick={this.oddEvent} data-section={menuLi.href} >{menuLi.title}</NavLink>
+                                        </li>
+                                    )
+                                })
+                            }
                             <li>
                                 <input type="search" placeholder="Buscar..." />
                             </li>
