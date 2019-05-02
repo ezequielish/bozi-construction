@@ -1,39 +1,39 @@
 {
-    "services":[
+    "services": [
         {
-            "title":"Rehabilitación de fachadas",
-            "tag":"fachada",
-            "description":"La rehabilitación y restauración de fachadas empieza por un análisis correcto de las patologías. Entender el motivo de la degradación de la fachada es vital, la falta de mantenimiento de las fachadas en muchas ocasiones obliga a tomar decisiones de reconstrucción total. Optamos por los conceptos de restauración y rehabilitación, lo que significa que siempre evaluamos si existe la necesidad o no de realizar una rehabilitación completa. Se tiene en cuenta la evaluación total del estado de los paramentos, grietas, cantos de forjado, forjados, etc.\n Para ello se realizan pruebas de tracción del soporte, estado de la pintura, estado de los forjados, voladizos, etc. Y se presentan todas y cada una de las opciones necesarias para consolidar la fachada, el objeto de este análisis necesario evita directamente a nuestros clientes el incurrir en costes innecesarios.",
-            "url":"../assets/img/services/reforma.jpg",
-            "_id":1
+            "title": "Rehabilitación de fachadas",
+            "tag": "fachada",
+            "description": "La rehabilitación y restauración de fachadas empieza por un análisis correcto de las patologías. Entender el motivo de la degradación de la fachada es vital, la falta de mantenimiento de las fachadas en muchas ocasiones obliga a tomar decisiones de reconstrucción total. Optamos por los conceptos de restauración y rehabilitación, lo que significa que siempre evaluamos si existe la necesidad o no de realizar una rehabilitación completa. Se tiene en cuenta la evaluación total del estado de los paramentos, grietas, cantos de forjado, forjados, etc.\n Para ello se realizan pruebas de tracción del soporte, estado de la pintura, estado de los forjados, voladizos, etc. Y se presentan todas y cada una de las opciones necesarias para consolidar la fachada, el objeto de este análisis necesario evita directamente a nuestros clientes el incurrir en costes innecesarios.",
+            "url": "../img/services_fachada.jpg",
+            "_id": 1
         },
         {
-            "title":"Reformas",
-            "tag":"reforma",
-            "description":"Al igual que los clientes que ya han confiado en nosotros, te ofreceremos grandes ideas en diseño y multitud de posibles combinaciones para hacer la reforma de tu vivienda. \n Te daremos asesoramiento personalizado y recomendaciones para tu nuevo proyecto. Sabemos cómo trabajar y combinar todos los materiales a emplear para que todo quede perfecto, siempre teniendo en cuenta la mejor relación calidad-precio de todos los productos a emplear en la reforma de su cocina, baño o vivienda en general. \n Si quieres hacer de la reforma de tu negocio una inversión y adaptarlo a tus necesidades e ideas. Te recomendaremos los mejores materiales en términos de calidad, funcionalidad y fiabilidad existentes en el mercado.",
-            "url":"./img/hero-silder/img-1.jpg",
-            "_id":2
+            "title": "Reformas",
+            "tag": "reforma",
+            "description": "Al igual que los clientes que ya han confiado en nosotros, te ofreceremos grandes ideas en diseño y multitud de posibles combinaciones para hacer la reforma de tu vivienda. \n Te daremos asesoramiento personalizado y recomendaciones para tu nuevo proyecto. Sabemos cómo trabajar y combinar todos los materiales a emplear para que todo quede perfecto, siempre teniendo en cuenta la mejor relación calidad-precio de todos los productos a emplear en la reforma de su cocina, baño o vivienda en general. \n Si quieres hacer de la reforma de tu negocio una inversión y adaptarlo a tus necesidades e ideas. Te recomendaremos los mejores materiales en términos de calidad, funcionalidad y fiabilidad existentes en el mercado.",
+            "url": "../img/services_reforma.jpg",
+            "_id": 2
         },
         {
-            "title":"Pinturas de viviendas",
-            "tag":"pintura",
-            "description":"Tú eres único y tu nuevo espacio también lo será. Por ello cada diseño es personalizado y exclusivo. En todos nuestros trabajos de pintura y decoración utilizamos los mejores materiales y las técnicas más innovadoras. \n ¿Cómo quieres decorar tu espacio? ¿Buscas un espacio de estilo clásico, moderno, rústico, vintage? ¿O quizás quieras modernizar tu espacio y darle otra apariencia? Si aún no lo tienes claro, estaremos de acuerdo en algo: buscas una casa con alma y personalidad. \n Para conseguir un perfecto proyecto de decoración para tu vivienda, local u oficina, nuestros diseñadores e interioristas trabajarán conjuntamente incorporando tus gustos y necesidades al proyecto, para que éste pueda funcionar y enriquecer tu calidad de vida.",
-            "url":"../assets/img/services/reforma.jpg",
-            "_id":3
+            "title": "Pinturas de viviendas",
+            "tag": "pintura",
+            "description": "Tú eres único y tu nuevo espacio también lo será. Por ello cada diseño es personalizado y exclusivo. En todos nuestros trabajos de pintura y decoración utilizamos los mejores materiales y las técnicas más innovadoras. \n ¿Cómo quieres decorar tu espacio? ¿Buscas un espacio de estilo clásico, moderno, rústico, vintage? ¿O quizás quieras modernizar tu espacio y darle otra apariencia? Si aún no lo tienes claro, estaremos de acuerdo en algo: buscas una casa con alma y personalidad. \n Para conseguir un perfecto proyecto de decoración para tu vivienda, local u oficina, nuestros diseñadores e interioristas trabajarán conjuntamente incorporando tus gustos y necesidades al proyecto, para que éste pueda funcionar y enriquecer tu calidad de vida.",
+            "url": "../img/services_pintura.jpg",
+            "_id": 3
         },
         {
-            "title":"Bajantes",
-            "tag":"bajantes",
-            "description":"Disponemos de especialistas en toda clase de trabajos en altura, entre ellos los especializados en reformas de bajantes. \n Bien es sabido que a lo largo de todo el año, bajantes como canalones, tuberías y desagües han de ser mantenidos y limpiados de restos de hojarasca y de cuanta suciedad amenace embozarlos. Los canalones muchas veces se encuentran a gran altura, pero no es necesario realizar intervenciones que impliquen el montaje de andamios. \n Confíe sus trabajos relativos a reformas de bajantes a empresas de trabajos verticales como la que puede encontrar en nuestro conjunto de profesionales. Contamos con otros servicios complementarios como impermeabilizaciones y limpieza de terrazas y fachadas.",
-            "url":"../assets/img/services/reforma.jpg",
-            "_id":4
+            "title": "Bajantes",
+            "tag": "bajantes",
+            "description": "Disponemos de especialistas en toda clase de trabajos en altura, entre ellos los especializados en reformas de bajantes. \n Bien es sabido que a lo largo de todo el año, bajantes como canalones, tuberías y desagües han de ser mantenidos y limpiados de restos de hojarasca y de cuanta suciedad amenace embozarlos. Los canalones muchas veces se encuentran a gran altura, pero no es necesario realizar intervenciones que impliquen el montaje de andamios. \n Confíe sus trabajos relativos a reformas de bajantes a empresas de trabajos verticales como la que puede encontrar en nuestro conjunto de profesionales. Contamos con otros servicios complementarios como impermeabilizaciones y limpieza de terrazas y fachadas.",
+            "url": "../img/services_bajantes.jpg",
+            "_id": 4
         },
         {
-            "title":"Cerrajería",
-            "tag":"cerrajeria",
-            "description":"Los productos que realizamos son propios tanto de cerrajería artística tradicional como de una línea más moderna. Podemos enunciar algunos como: escaleras, barandillas, rejas, forros, escaparates, puertas, pérgolas, marquesinas, estructuras metálicas, mobiliario y en general cualquier tipo de producto para decoración.  \n Aplicamos trabajos por a medida con la aplicación de materiales como: hierro, acero, aluminio, cobre, latón. Somos una empresa cualificada para la realización de todo tipo de trabajos de cerrajería, contando con los equipos de fabricación y técnicos más cualificados del mercado. Especialistas en el desarrollo de esta actividad capaces de atender cualquier necesidad de nuestros clientes de forma inmediata y eficiente.",
-            "url":"../assets/img/services/reforma.jpg",
-            "_id":5
+            "title": "Cerrajería",
+            "tag": "cerrajeria",
+            "description": "Los productos que realizamos son propios tanto de cerrajería artística tradicional como de una línea más moderna. Podemos enunciar algunos como: escaleras, barandillas, rejas, forros, escaparates, puertas, pérgolas, marquesinas, estructuras metálicas, mobiliario y en general cualquier tipo de producto para decoración.  \n Aplicamos trabajos por a medida con la aplicación de materiales como: hierro, acero, aluminio, cobre, latón. Somos una empresa cualificada para la realización de todo tipo de trabajos de cerrajería, contando con los equipos de fabricación y técnicos más cualificados del mercado. Especialistas en el desarrollo de esta actividad capaces de atender cualquier necesidad de nuestros clientes de forma inmediata y eficiente.",
+            "url": "../img/services_cerrajeria.jpg",
+            "_id": 5
         }
     ]
 }

@@ -8,7 +8,8 @@
     "start:dev": "webpack-dev-server --mode=development",
     "build:server:dev": "webpack --config ./webpack.server.config.js --mode=development",
     "server:dev": "babel-node ./server/server.js",
-    "server:watch:dev": "npm run build:server:dev & babel-watch ./server/server.js "
+    "server:watch:babel": "babel-watch ./server/server.js",
+    "build:dev:server": "npm run build:dev & npm run build:server:dev"
   },
   "repository": {
     "type": "git",

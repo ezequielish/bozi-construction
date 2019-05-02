@@ -9,14 +9,21 @@ import HeroServices from '../components/container/HeroServices'
 class Services extends Component {
 
     render() {
+        // console.log(this.props.location)
         let tagUrl = this.props.match.params.id
-        const { services:servicios } = services
+        if (!tagUrl) {
+            tagUrl = this.props.location.pathname.split('/servicios/')[1]
+            !(tagUrl) ? tagUrl = 'reforma' : null
+        }
+
+
+        const { services: servicios } = services
         let thisService = servicios.filter(service => service.tag == tagUrl)
         return (
             <Fragment>
-                 <Header data={data.menu} />
-                    <HeroServices data={thisService} />
-                    <ContactContainer />
+                <Header data={data.menu} />
+                <HeroServices data={thisService} />
+                <ContactContainer />
                 <Footer />
             </Fragment>
         )

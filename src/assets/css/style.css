@@ -6,12 +6,25 @@
 @import './components/projects.css';
 @import './components/contact.css';
 @import './components/footer.css';
+@import './components/services/HeroServices.css';
 @import './components/animaciones.css';
+
 body{
     background: var(--white-color);
     font-size: 1em;
     font-family: var(--dosis-font);
     margin: 0;
+
+    & .preLoad{
+        opacity: 0;
+        transform:translateY(-15px);
+    }
+    
+    & .loadElement{
+        transition: .8s;
+        opacity: 1;
+        transform:translateY(0px);
+    } 
 }
 section{
     margin-bottom: var(--spacing_large);

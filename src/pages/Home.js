@@ -18,7 +18,7 @@ class Home extends Component {
                 <ServicesContainer />
                 <About />
                 <Methodology data={data.methodology} />
-                <ProjectsContainer />
+                {/* <ProjectsContainer /> */}
                 <ContactContainer />
                 <Footer />
             </ Fragment>

@@ -25,6 +25,10 @@ class Header extends Component {
         window.addEventListener('scroll', () => {
             let element = document.querySelector('header');
             let elementTwo = document.querySelector('.Services');
+            if (elementTwo == null) {
+                elementTwo = document.querySelector('.ServicesHero__description_container');
+            }
+
             let screenSize = innerWidth;
             if (screenSize <= 1000) {
                 backgroundEffect(element, elementTwo, 0, 1);
@@ -58,11 +62,13 @@ class Header extends Component {
 
                             {
                                 menu.map((menuLi, index) => {
-                                    return (
-                                        <li key={index} >
-                                            <NavLink to="/" onClick={this.oddEvent} data-section={menuLi.href} >{menuLi.title}</NavLink>
-                                        </li>
-                                    )
+                                    if (menuLi.href != "Projects") {
+                                        return (
+                                            <li key={index} >
+                                                <NavLink to="/" onClick={this.oddEvent} data-section={menuLi.href} >{menuLi.title}</NavLink>
+                                            </li>
+                                        )
+                                    }
                                 })
                             }
                             <li>

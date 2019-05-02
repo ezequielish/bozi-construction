@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Services from '../Services';
 import { fadeElement, fade } from '../../assets/js/effects'
 import { Link } from 'react-router-dom';
+import ServicesItem from '../ServicesItems'
 import service_1 from '../../assets/img/icons/services_category/reforma.svg';
 import service_2 from '../../assets/img/icons/services_category/pintura.svg';
 import service_3 from '../../assets/img/icons/services_category/fachada.svg';
@@ -50,13 +51,21 @@ class ServicesContainer extends Component {
             }
         ]
     }
+    handleClick() {
+        let w = window
+        w.scrollTo({
+            'behavior': 'smooth',
+            'left': 0,
+            'top': 0
+        });
 
+    }
     componentDidMount() {
         let w = window;
 
         w.addEventListener('scroll', () => {
-            
-            if(this.servicesContainer){
+
+            if (this.servicesContainer) {
                 fadeElement(this.servicesContainer)
             }
         })
@@ -83,15 +92,9 @@ class ServicesContainer extends Component {
                                     pathname: `/servicios/${i.tag}`
                                 }}
                                     key={i._id}
+                                    onClick={this.handleClick}
                                 >
-                                    <div className='Services__category_items' >
-                                        <figure>
-                                            <img src={i.img} width='100%' height='100%' />
-                                        </figure>
-                                        <div className='Services__category_items_title'>
-                                            <h3>{i.description}</h3>
-                                        </div>
-                                    </div>
+                                    <ServicesItem data={i} />
                                 </Link>
                             )
                         })

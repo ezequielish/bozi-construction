@@ -10,7 +10,8 @@ import './assets/css/style.css'; class App extends Component {
             <Fragment>
                 <Switch>
                     <Route path="/" exact component={Home} />
-                    <Route path="/servicios/:id" exact component={Services} />
+                    {/* <Route path="/" exact exact component={Services} /> */}
+                    <Route path="/servicios/:id" component={Services} />
                 </Switch>
             </Fragment>
 

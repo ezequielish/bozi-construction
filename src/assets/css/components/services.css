@@ -15,7 +15,8 @@
         align-items: center;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        padding: 15px;
+        padding:  var(--spacing_medium);
+        & a{ text-decoration:  none; }
         & .Services__category_items{
             display: flex;
             flex-direction: column;
@@ -67,8 +68,8 @@
       & .Services__description{
             width: 80%;
             margin: calc(var(--spacing_large) * 2);
-              transform: translateY(-15px);
-        opacity: 0;
+            ransform: translateY(-15px);
+            opacity: 0;
       }
       & .Services__category{
         justify-content: center;
