@@ -6,7 +6,7 @@ import '../assets/css/components/header.css';
 import { CSSTransition } from 'react-transition-group';
 import { backgroundEffect } from '../assets/js/effects';
 import SocialNetwork from './SocialNetwork';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 class Header extends Component {
     state = {
         menuSwitch: false,
@@ -61,14 +61,15 @@ class Header extends Component {
     }
     render() {
         const { data: menu } = this.props
-        // console.log(this.state.services)
         return (
             <header>
                 <nav>
                     <div className='Navbar__marca'>
-                        <figure>
-                            <img width="100%" height="100%" alt='Logo bozi' src={logo} />
-                        </figure>
+                        <Link to="/">
+                            <figure>
+                                <img width="100%" height="100%" alt='Logo bozi' src={logo} />
+                            </figure>
+                        </Link>
                     </div>
 
                     <CSSTransition in={this.state.menuSwitch} timeout={400} classNames="toggleMenu" >

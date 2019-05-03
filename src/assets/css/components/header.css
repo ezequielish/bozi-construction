@@ -151,6 +151,9 @@ header{
                     &:hover{
                         border-bottom: 1px solid var(--black-color);
                     }
+                    & input{
+                        color:black;
+                    }
                 } 
             }
             & .Navbar__btn_close{
