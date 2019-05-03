@@ -9,7 +9,8 @@ import SocialNetwork from './SocialNetwork';
 import { NavLink } from 'react-router-dom';
 class Header extends Component {
     state = {
-        menuSwitch: false
+        menuSwitch: false,
+        services: ''
     }
     oddEvent = (e) => {
         let section = e.target.dataset.section;
@@ -21,8 +22,28 @@ class Header extends Component {
         });
 
     }
+
+
+    handleSubmit(e) {
+        e.preventDefault();
+        let value = e.target.childNodes[0].value
+        let result = this.state.services.filter(p => {
+            return p.title.toLowerCase().includes(value.toLowerCase())
+        })
+
+        if (result[0]) {
+            this.props.history.push(`/servicios/${result[0].tag}`, { id: result[0].tag })
+            this.setState({ menuSwitch: !this.state.menuSwitch })
+            e.target.childNodes[0].value = ""
+        }
+    }
     componentDidMount() {
+        const { services } = this.props
+        this.setState({
+            services: services.services
+        })
         window.addEventListener('scroll', () => {
+
             let element = document.querySelector('header');
             let elementTwo = document.querySelector('.Services');
             if (elementTwo == null) {
@@ -39,9 +60,8 @@ class Header extends Component {
         this.setState({ menuSwitch: !this.state.menuSwitch })
     }
     render() {
-
         const { data: menu } = this.props
-
+        // console.log(this.state.services)
         return (
             <header>
                 <nav>
@@ -72,7 +92,10 @@ class Header extends Component {
                                 })
                             }
                             <li>
-                                <input type="search" placeholder="Buscar..." />
+                                <form onSubmit={this.handleSubmit.bind(this)} >
+                                    <input type="search" placeholder="Buscar..." />
+                                </form>
+
                             </li>
                             <SocialNetwork />
                         </ul>

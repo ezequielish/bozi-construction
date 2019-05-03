@@ -85,7 +85,6 @@ class HeroServices extends Component {
             <section className="ServicesHero">
 
                 <figure className="ServicesHero__img_container" >
-                    {/* <img src={service[0].url} style={{ opacity: 0 }} onLoad={this.imgRef.bind(this)} className="ServicesHero__img_hero" /> */}
 
                     {
                         !this.state.imgLoad &&

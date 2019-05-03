@@ -58,6 +58,9 @@ header nav ul li a{
 header nav ul li input{
                     border:none;
                     outline: none;
+                    background: none;
+                    color:white;
+                    font-size: 1.2em;
                 }
 
 header nav ul .Navbar__btn_close{
@@ -1078,6 +1081,12 @@ footer .SocialNetwork img{
                 }
 
 }
+.pageNotFound{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 .displace_right{}
 .displace_left{}
 .toggleMenu{}
@@ -1103,7 +1112,7 @@ body{
     font-size: 1em;
     font-family: 'Dosis', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
     font-family: var(--dosis-font);
-    margin: 0 
+    margin: 0
 }
 body .preLoad{
         opacity: 0;
@@ -1116,17 +1125,52 @@ body .loadElement{
         -webkit-transform:translateY(0px);
                 transform:translateY(0px);
     }
+body .loadApp{
+        width: 100%;
+        height: 100vh;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
 section{
     margin-bottom: 25px;
     margin-bottom: var(--spacing_large);
 }
-@media (min-width: 600px) {
+@media (min-width: 900px) {
     body{
         font-size: 1.5em;
     }
+  }
+/* @media (max-width: 600px)   and (orientation: landscape){ */
+/* .Hero{
+        padding: calc(var(--spacing_large) * 2);
+    } */
+/* } */
+@media (max-width: 1000px)   and  (orientation: landscape){
+    body{
+        font-size: 1em;
+    }
+    .Hero{
+        padding: calc(25px * 2);
+        padding: calc(var(--spacing_large) * 2);
+    }
+    header nav .Navbar__marca figure{
+                   width: 80px;
+                   height: 80px;
+                   margin: 0;
+                   cursor: pointer;
+    }
+    .Services .Services__category .Services__category_items figure{
+        width: 30%;
+    }
+           
+       
+   
   }
 @media (min-width: 1024px) {
     body{
         font-size: 1em;
     }
   }
+
+

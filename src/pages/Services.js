@@ -21,7 +21,7 @@ class Services extends Component {
         let thisService = servicios.filter(service => service.tag == tagUrl)
         return (
             <Fragment>
-                <Header data={data.menu} />
+                <Header data={data.menu} services={services} history={this.props.history} />
                 <HeroServices data={thisService} />
                 <ContactContainer />
                 <Footer />

@@ -8,12 +8,12 @@ import Methodology from '../components/Methodology';
 import ProjectsContainer from '../components/container/ProjectsContainer';
 import ContactContainer from '../components/container/ContactContainer';
 import data from '../data/app';
-
+import services from '../data/services';
 class Home extends Component {
     render() {
         return (
             <Fragment>
-                <Header data={data.menu} />
+                <Header data={data.menu} services={services} history={this.props.history} />
                 <HeroContainer data={data.portadas} />
                 <ServicesContainer />
                 <About />
