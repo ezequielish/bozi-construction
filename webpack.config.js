@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const devMode = process.env.NODE_ENV !== 'production';
+const webpack = require('webpack');
 const config = {
     entry: {
         app: path.resolve(__dirname, 'src/index.js')
@@ -34,7 +35,7 @@ const config = {
                         options: {
                             ident: 'postcss',
                             plugins: (loader) => [
-                                require('postcss-import')({options: { sourceMap: true }}),
+                                require('postcss-import')({ options: { sourceMap: true } }),
                                 require('postcss-nesting'),
                                 require('postcss-apply'),
                                 require('postcss-custom-media')({
@@ -84,6 +85,9 @@ const config = {
         new MiniCssExtractPlugin({
             filename: devMode ? 'css/[name].css' : 'css/[name].[hash].css',
             chunkFilename: devMode ? 'css/[id].css' : 'css/[id].[hash].css',
+        }),
+        new webpack.DllReferencePlugin({
+            manifest: require('./modules-manifest.json')
         })
     ],
 
