@@ -18,7 +18,7 @@ var _reactRouter = require("react-router");
 
 var _server = _interopRequireDefault(require("react-dom/server"));
 
-var _app = _interopRequireDefault(require("../dist/ssr/app.600a3dbf2f85abc19a79"));
+var _app = _interopRequireDefault(require("../dist/ssr/app"));
 
 var _responseCache = _interopRequireDefault(require("../utils/responseCache"));
 
@@ -60,10 +60,10 @@ app.get('*', function (req, res) {
 });
 app.post('/contactar', function (req, res) {
   var _req$body$data = req.body.data,
-      nameClient = _req$body$data.nameClient,
-      emailClient = _req$body$data.emailClient,
-      subject = _req$body$data.subject,
-      messageClient = _req$body$data.messageClient;
+    nameClient = _req$body$data.nameClient,
+    emailClient = _req$body$data.emailClient,
+    subject = _req$body$data.subject,
+    messageClient = _req$body$data.messageClient;
 
   if (messageClient == "" || typeof messageClient == 'string') {
     var transp = _transporter.transporter;
@@ -90,6 +90,7 @@ app.post('/contactar', function (req, res) {
 });
 console.log("Iniciando servidor...");
 var port = _index.config.dev ? 3000 : process.env.PORT;
-var server = app.listen(port, function () {
-  console.log("Se ha iniciado el servidor en el puerto ".concat(server.address().port));
-});
+// var server = app.listen(port, function () {
+//   console.log("Se ha iniciado el servidor en el puerto ".concat(server.address().port));
+// });
+module.exports = app

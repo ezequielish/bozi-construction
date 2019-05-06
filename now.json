@@ -9,16 +9,7 @@
     "builds": [
         {
             "src": "server/index.js",
-            "use": "@now/node-server",
-            "config": {
-                "maxLambdaSize": "20mb"
-            }
-        }
-    ],
-    "routes": [
-        {
-            "src": "/",
-            "dest": "server/index.js"
+            "use": "@now/node"
         }
     ]
 }

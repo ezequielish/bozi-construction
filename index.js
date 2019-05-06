@@ -8,7 +8,7 @@ var _bodyParser = _interopRequireDefault(require("body-parser"));
 
 var _react = _interopRequireDefault(require("react"));
 
-var _index = require("../config/index");
+var _index = require("./config/index");
 
 var _cors = _interopRequireDefault(require("cors"));
 
@@ -18,15 +18,15 @@ var _reactRouter = require("react-router");
 
 var _server = _interopRequireDefault(require("react-dom/server"));
 
-var _app = _interopRequireDefault(require("../dist/ssr/app"));
+var _app = _interopRequireDefault(require("./dist/ssr/app"));
 
-var _responseCache = _interopRequireDefault(require("../utils/responseCache"));
+var _responseCache = _interopRequireDefault(require("./utils/responseCache"));
 
 var _dnsPrefetchControl = _interopRequireDefault(require("dns-prefetch-control"));
 
 var _frameguard = _interopRequireDefault(require("frameguard"));
 
-var _time = require("../utils/time");
+var _time = require("./utils/time");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
