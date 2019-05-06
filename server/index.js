@@ -89,8 +89,8 @@ app.post('/contactar', function (req, res) {
   }
 });
 console.log("Iniciando servidor...");
+
 var port = _index.config.dev ? 3000 : process.env.PORT;
-// var server = app.listen(port, function () {
-//   console.log("Se ha iniciado el servidor en el puerto ".concat(server.address().port));
-// });
-module.exports = app
+var server = app.listen(port, function () {
+  console.log("Se ha iniciado el servidor en el puerto ".concat(server.address().port));
+});
