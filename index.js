@@ -43,8 +43,9 @@ app.use((0, _frameguard["default"])({
 })); //midleware 
 
 app.use(_bodyParser["default"].json());
-app.use(_express["default"]["static"]('dist'));
-app.use('/', _express["default"]["static"]('images'));
+app.use(express.static('dist'));
+
+app.use('/', express.static('images'));
 app.get('*', function (req, res) {
     (0, _responseCache["default"])(res, _time.SIXTY_MINUTES_IN_SECONDS);
 
