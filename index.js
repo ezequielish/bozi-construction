@@ -18,7 +18,7 @@ var _reactRouter = require("react-router");
 
 var _server = _interopRequireDefault(require("react-dom/server"));
 
-var _app = _interopRequireDefault(require("./ssr/app"));
+var _app = require("./dist/ssr/app");
 
 var _responseCache = _interopRequireDefault(require("./utils/responseCache"));
 
