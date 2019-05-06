@@ -7,7 +7,7 @@ import cors from 'cors';
 import { transporter } from './transporter'
 import { StaticRouter } from 'react-router';
 import reactDOMServer from 'react-dom/server';
-import App from '../dist/ssr/app.600a3dbf2f85abc19a79';
+import App from '../dist/ssr/app';
 import cacheResponse from "../utils/responseCache";
 import dnsPrefetchControl from 'dns-prefetch-control';
 import frameguard from 'frameguard';

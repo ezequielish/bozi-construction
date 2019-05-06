@@ -18,7 +18,7 @@ var _reactRouter = require("react-router");
 
 var _server = _interopRequireDefault(require("react-dom/server"));
 
-var _app = _interopRequireDefault(require("../dist/ssr/app.600a3dbf2f85abc19a79.js"));
+var _app = _interopRequireDefault(require("../dist/ssr/app.js"));
 
 var _responseCache = _interopRequireDefault(require("../utils/responseCache"));
 
@@ -90,8 +90,8 @@ app.post('/contactar', function (req, res) {
 });
 console.log("Iniciando servidor...");
 var port = _index.config.dev ? 3000 : process.env.PORT;
-// var server = app.listen(port, function () {
-//   console.log("Se ha iniciado el servidor en el puerto ".concat(server.address().port));
-// });
+var server = app.listen(port, function () {
+  console.log("Se ha iniciado el servidor en el puerto ".concat(server.address().port));
+});
 
-app.listen()
+// app.listen()
