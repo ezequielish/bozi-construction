@@ -4,8 +4,7 @@
   "description": "Sito web de Construcciones y Reformas",
   "main": "index.js",
   "scripts": {
-    "start": "node ./server/index.js & npm run build:server:dev",
-    "build": "NODE_ENV=production webpack --mode=production",
+    "start": "node ./server/index.js",
     "build:dev": "webpack --mode=development",
     "start:dev": "webpack-dev-server --mode=development",
     "build:server:dev": "webpack --config ./webpack.server.config.js --mode=development",
