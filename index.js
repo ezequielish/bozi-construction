@@ -12,7 +12,7 @@ var _index = require("./config/index");
 
 var _cors = _interopRequireDefault(require("cors"));
 
-var _transporter = require("./transporter");
+var _transporter = require("./server/transporter");
 
 var _reactRouter = require("react-router");
 
