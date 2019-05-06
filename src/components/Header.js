@@ -10,12 +10,13 @@ import { NavLink, Link } from 'react-router-dom';
 class Header extends Component {
     state = {
         menuSwitch: false,
-        services: ''
+        services: '',
     }
     oddEvent = (e) => {
+        let w = window
         let section = e.target.dataset.section;
         let sectionScroll = document.querySelector(`.${section}`);
-        window.scrollTo({
+        w.scrollTo({
             'behavior': 'smooth',
             'left': 0,
             'top': sectionScroll.offsetTop
@@ -25,6 +26,7 @@ class Header extends Component {
 
 
     handleSubmit(e) {
+        let w = window
         e.preventDefault();
         let value = e.target.childNodes[0].value
         let result = this.state.services.filter(p => {
@@ -32,17 +34,23 @@ class Header extends Component {
         })
 
         if (result[0]) {
+            w.scrollTo({
+                'behavior': 'smooth',
+                'left': 0,
+                'top': 0
+            });
             this.props.history.push(`/servicios/${result[0].tag}`, { id: result[0].tag })
             this.setState({ menuSwitch: !this.state.menuSwitch })
             e.target.childNodes[0].value = ""
         }
     }
     componentDidMount() {
+        let w = window
         const { services } = this.props
         this.setState({
             services: services.services
         })
-        window.addEventListener('scroll', () => {
+        w.addEventListener('scroll', () => {
 
             let element = document.querySelector('header');
             let elementTwo = document.querySelector('.Services');

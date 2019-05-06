@@ -13,8 +13,10 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
+        publicPath: "/",
         filename: '[name].js',
         library: '[name]',
+        sourceMapFilename: "[name].map",
     },
     plugins: [
         new webpack.DllPlugin({

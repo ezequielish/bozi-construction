@@ -76,11 +76,10 @@ class HeroServices extends Component {
         this.setState({ fadeIn: true })
         fadeElement(this.descriptionDiv)
     }
+
     render() {
 
-
         const { data: service } = this.props
-        // console.log(service[0].description.split('\n'))
         return (
             <section className="ServicesHero">
 

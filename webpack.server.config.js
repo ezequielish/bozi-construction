@@ -1,7 +1,7 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const devMode = process.env.NODE_ENV !== 'production';
-
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const config = {
     entry: {
         app: path.resolve(__dirname, 'src/app.js')
@@ -9,13 +9,22 @@ const config = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'ssr/[name].js',
+        filename: devMode ? 'ssr/[name].js' : 'ssr/[name].[hash].js',
+        chunkFilename: devMode ? 'ssr/[name].js' : 'ssr/[name].[hash].js',
         publicPath: "/",
         libraryTarget: 'commonjs2'
     },
     target: 'node',
-    devServer: {
-        port: 9000,
-    },
+    // devServer: {
+    //     port: 9000,
+    // },
+    // optimization: {
+    //     minimizer: [
+    //         new UglifyJsPlugin({
+    //             exclude: /\/node_modules/,
+    //         }),
+    //     ],
+    // },
     module: {
         rules: [
 
@@ -81,6 +90,7 @@ const config = {
         new MiniCssExtractPlugin({
             filename: devMode ? 'css/[name].css' : 'css/[name].[hash].css',
             chunkFilename: devMode ? 'css/[id].css' : 'css/[id].[hash].css',
+
         })
     ],
 

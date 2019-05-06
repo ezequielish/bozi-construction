@@ -1,6 +1,8 @@
 const path = require('path');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const devMode = process.env.NODE_ENV !== 'production';
 const webpack = require('webpack');
 const config = {
@@ -10,13 +12,20 @@ const config = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         publicPath: "/",
-        filename: "bundle.js",
+        filename: devMode ? "bundle.js" : "bundle.[hash].js",
+        chunkFilename: devMode ? "bundle.js" : "bundle.[hash].js"
     },
     devServer: {
 
         port: 9000
     },
-
+    optimization: {
+        minimizer: [
+            new UglifyJsPlugin({
+                exclude: /\/node_modules/,
+            }),
+        ],
+    },
     module: {
         rules: [
 
@@ -87,8 +96,9 @@ const config = {
             chunkFilename: devMode ? 'css/[id].css' : 'css/[id].[hash].css',
         }),
         new webpack.DllReferencePlugin({
-            manifest: require('./modules-manifest.json')
-        })
+            manifest: require('./modules-manifest.json'),
+        }),
+
     ],
 
 }
@@ -96,6 +106,8 @@ const config = {
 
 module.exports = (env, argv) => {
     if (argv.mode === 'development') { }
-    if (argv.mode === 'production') { }
+    if (argv.mode === 'production') {
+        config.plugins.push(new CleanWebpackPlugin())
+    }
     return config;
 }

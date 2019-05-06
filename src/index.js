@@ -5,7 +5,6 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './app';
 
 const app = document.getElementById('app');
-const thisWindows = window
 
 ReactDOM.render(
     <BrowserRouter>

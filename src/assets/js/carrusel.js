@@ -26,7 +26,6 @@ function inizialitedCarrusel(itemsImg, btnCarrusel, countPortada) {
     let $imgCarrusel = transformInArray(itemsImg) //are created array img in the carrusel
 
     $imgCarrusel.map((img, index) => {
-        // console.log(index)
         img.style.opacity = 0;
         if (countPortada === index) {
             img.style.opacity = 1;
