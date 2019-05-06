@@ -1,7 +1,6 @@
 import express from 'express';
 import helmet from 'helmet';
 import bodyParser from 'body-parser';
-import path from 'path';
 import React from 'react';
 import { config } from '../config/index'
 import cors from 'cors';

@@ -1,0 +1,24 @@
+{
+    "name": "bozi",
+    "alias": "bozi.now.sh",
+    "env": {
+        "NODE_ENV": "@envvar",
+        "PORT": "@port"
+    },
+    "version": 2,
+    "builds": [
+        {
+            "src": "server/index.js",
+            "use": "@now/node-server",
+            "config": {
+                "maxLambdaSize": "20mb"
+            }
+        }
+    ],
+    "routes": [
+        {
+            "src": "/",
+            "dest": "server/index.js"
+        }
+    ]
+}
