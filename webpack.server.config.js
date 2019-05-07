@@ -8,7 +8,6 @@ const config = {
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'ssr/[name].js',
         filename: devMode ? 'ssr/[name].js' : 'ssr/[name].[hash].js',
         chunkFilename: devMode ? 'ssr/[name].js' : 'ssr/[name].[hash].js',
         publicPath: "/",
@@ -35,7 +34,7 @@ const config = {
                     {
                         loader: "css-loader",
                         options: {
-                            importLoaders: 1,
+                            importLoaders: 1
                         }
                     },
                     {
@@ -88,9 +87,7 @@ const config = {
 
     plugins: [
         new MiniCssExtractPlugin({
-            filename: devMode ? 'css/[name].css' : 'css/[name].[hash].css',
-            chunkFilename: devMode ? 'css/[id].css' : 'css/[id].[hash].css',
-
+            filename: 'css/[name].css'
         })
     ],
 

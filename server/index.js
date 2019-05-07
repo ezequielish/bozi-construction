@@ -18,7 +18,7 @@ var _reactRouter = require("react-router");
 
 var _server = _interopRequireDefault(require("react-dom/server"));
 
-var _app = _interopRequireDefault(require("../dist/ssr/app"));
+var _app = _interopRequireDefault(require("../dist/ssr/app.a509daa98b80d0f0a46d"));
 
 var _responseCache = _interopRequireDefault(require("../utils/responseCache"));
 
@@ -55,7 +55,7 @@ app.get('*', function (req, res) {
     }
   }, _react["default"].createElement(_app["default"], null)));
 
-  res.write("\n      <!DOCTYPE html>\n        <html lang=\"es\">\n        <head>\n          <meta charset=\"UTF-8\">\n          <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n          <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\" />\n          <link rel=\"icon\" type=\"image/png\" href=\"/img/favicon.png\" /> \n          <title>Bozi Construcciones y Reformas</title>\n          <link rel=\"stylesheet\" href=\"/css/app.a0a63ee1825dde494c43.css\">\n        </head>\n        <body>\n          <div id=\"app\">".concat(html, "</div>\n          <script src=\"/modules.js\"></script>\n          <script src=\"/bundle.a0a63ee1825dde494c43.js\"></script>\n\n        </body>\n      </html>\n    "));
+  res.write("\n      <!DOCTYPE html>\n        <html lang=\"es\">\n        <head>\n          <meta charset=\"UTF-8\">\n          <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n          <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\" />\n          <link rel=\"icon\" type=\"image/png\" href=\"/img/favicon.png\" /> \n          <title>Bozi Construcciones y Reformas</title>\n          <link rel=\"stylesheet\" href=\"/css/app.d10c6f1bc642581d808f.css\">\n        </head>\n        <body>\n          <div id=\"app\">".concat(html, "</div>\n          <script src=\"/modules.js\"></script>\n          <script src=\"/bundle.d10c6f1bc642581d808f.js\"></script>\n\n        </body>\n      </html>\n    "));
   res.end();
 });
 app.post('/contactar', function (req, res) {
@@ -68,9 +68,8 @@ app.post('/contactar', function (req, res) {
   if (messageClient == "" || typeof messageClient == 'string') {
     var transp = _transporter.transporter;
     var mailOptions = {
-      from: emailClient,
-      // TODO: email sender
-      to: '',
+      // from: emailClient, // TODO: email sender
+      to: _index.config.email,
       // TODO: email receiver
       subject: subject,
       text: "Nombre Cliente: ".concat(nameClient, " \n Email Cliente: ").concat(emailClient, " \n Asunto: ").concat(subject, " \n Mensaje: ").concat(messageClient)
@@ -89,7 +88,6 @@ app.post('/contactar', function (req, res) {
   }
 });
 console.log("Iniciando servidor...");
-
 var port = _index.config.dev ? 3000 : process.env.PORT;
 var server = app.listen(port, function () {
   console.log("Se ha iniciado el servidor en el puerto ".concat(server.address().port));

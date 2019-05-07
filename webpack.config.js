@@ -51,6 +51,7 @@ const config = {
                                     preserve: false
                                 }),
                                 require('postcss-preset-env')(),
+                                require('cssnano')()
                             ]
                         }
                     }
