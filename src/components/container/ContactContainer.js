@@ -90,7 +90,7 @@ class ContactContainer extends Component {
                     <h3>Brindamos toda la información que necesitas saber.</h3>
 
                     <div className='description-info'>
-                        <p><img src={whatsapp} width='20px' height='20px' /> +34 666 37 87 09</p>
+                        <p><img src={whatsapp} width='20px' height='20px' /> +34 671 79 80 82</p>
                         <p><img src={whatsapp} width='20px' height='20px' /> +34 644 87 20 16</p>
                         <p><img src={email} width='20px' height='20px' /> bozicontruccionesreformas@gmail.com</p>
                         <p><img src={mapa} width='20px' height='20px' /><img /> Valencia, España.</p>

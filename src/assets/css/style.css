@@ -14,6 +14,7 @@ body{
     background: var(--white-color);
     font-size: 1em;
     font-family: var(--dosis-font);
+    font-display: fallback;
     margin: 0;
 
     & .preLoad{

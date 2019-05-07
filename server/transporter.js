@@ -1,12 +1,12 @@
 const nodemailer = require('nodemailer');
-
+const { email, passwordEmail } = require('../config/index').config;
 
 // Step 1
 let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: '', // TODO: your gmail account
-        pass: '' // TODO: your gmail password
+        user: email, // TODO: your gmail account
+        pass: passwordEmail // TODO: your gmail password
     }
 });
 

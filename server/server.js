@@ -64,10 +64,11 @@ app.get('*', (req, res) => {
 app.post('/contactar', (req, res) => {
   const { nameClient, emailClient, subject, messageClient } = req.body.data
   if (messageClient == "" || typeof messageClient == 'string') {
+
     let transp = transporter;
     let mailOptions = {
-      from: emailClient, // TODO: email sender
-      to: '', // TODO: email receiver
+      // from: emailClient, // TODO: email sender
+      to: config.email, // TODO: email receiver
       subject: subject,
       text: `Nombre Cliente: ${nameClient} \n Email Cliente: ${emailClient} \n Asunto: ${subject} \n Mensaje: ${messageClient}`
     };

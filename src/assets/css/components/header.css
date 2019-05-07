@@ -56,6 +56,11 @@ header{
                 top: 0;
                 padding: var(--spacing_large);
                 cursor: pointer;
+                & button{
+                    background: none;
+                    border:none;
+                    outline:none;
+                }
                 & img{
                     will-change: transform;
                     transition: all .8s;
@@ -76,6 +81,11 @@ header{
         display: flex;
         height: 100%;
         top: 0;
+        & button{
+            background: none;
+            border:none;
+            outline:none;
+        }
         & img{
             width:20px;
             height: 20px;  

@@ -83,7 +83,7 @@ class Header extends Component {
                     <CSSTransition in={this.state.menuSwitch} timeout={400} classNames="toggleMenu" >
                         <ul>
                             <div className='Navbar__btn_close' onClick={this.handleMenuToggle.bind(this)}>
-                                <span><img width='20px' height='20px' src={btnClose} alt='boton open' /></span>
+                                <button><img width='20px' height='20px' src={btnClose} alt='boton open' /></button>
                             </div>
                             <li>
                                 <NavLink to="/" >Inicio</NavLink>
@@ -111,7 +111,7 @@ class Header extends Component {
                     </CSSTransition>
                 </nav>
                 <div className='Navbar__btn_open' onClick={this.handleMenuToggle.bind(this)}>
-                    <span><img src={btnOpen} alt='boton open' /></span>
+                    <button><img src={btnOpen} alt='boton open' /></button>
                 </div>
 
             </header >
