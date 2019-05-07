@@ -3,13 +3,15 @@
     "alias": "bozi.now.sh",
     "env": {
         "NODE_ENV": "@envvar",
-        "PORT": "@port"
+        "PORT": "@port",
+        "EMAIL": "@email",
+        "PASS_EMAIL": "@passemail"
     },
     "version": 2,
     "builds": [
         {
-            "src": "server/index.js",
-            "use": "@now/node"
+            "src": "package.json",
+            "use": "@now/static-build"
         }
     ]
 }
