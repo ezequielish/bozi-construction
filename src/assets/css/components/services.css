@@ -67,7 +67,7 @@
      
       & .Services__description{
             width: 80%;
-            margin: calc(var(--spacing_large) * 2);
+            margin: var(--spacing_large);
             ransform: translateY(-15px);
             opacity: 0;
       }
@@ -75,6 +75,7 @@
         justify-content: center;
         align-items: center;
         display: flex;
+        flex-wrap: wrap;
           & a{
             justify-content: center;
             align-items: center;
@@ -85,21 +86,26 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                align-items: center;
+                align-items: center;                
                 width: 100%;
                 background-color: var(--white-color);
                 cursor: pointer; 
-                width: 50%;
+                width: 200px;
+                margin: 25px;
+                &:hover figure img{
+                transition: all .5s; 
+                box-shadow: 0px 6px 20px 0px rgba(0,0,0,0.75);
+                }
                 & figure{
                     margin:0;
-                    width: 100%;
-                    height: 100%;
-                    cursor: pointer;                
+                    width: 200px;
+                    height: 200px;
+                    cursor: pointer;                          
+                        & img{
+                            width: 100%;
+                            height: 100%;
+                        }
                     }
-                }
-                &:hover{
-                    transform: scale(1.1);
-                    box-shadow: 0px 6px 20px 0px rgba(0,0,0,0.75);
                 }
             }
         }

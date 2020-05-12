@@ -3,11 +3,15 @@ import Services from '../Services';
 import { fadeElement, fade } from '../../assets/js/effects'
 import { Link } from 'react-router-dom';
 import ServicesItem from '../ServicesItems'
-import service_1 from '../../assets/img/icons/services_category/reforma.svg';
-import service_2 from '../../assets/img/icons/services_category/pintura.svg';
-import service_3 from '../../assets/img/icons/services_category/fachada.svg';
-import service_4 from '../../assets/img/icons/services_category/bajante.svg';
-import service_5 from '../../assets/img/icons/services_category/cerrajeria.svg';
+import service_cocina from '../../assets/img/services/cocinas.svg';
+import service_piscina from '../../assets/img/services/piscina.svg';
+import service_pintura from '../../assets/img/services/pintura.svg';
+import service_carpinteria from '../../assets/img/services/carpinteria.svg';
+import service_solares from '../../assets/img/services/solares.svg';
+import service_reforma_integral from '../../assets/img/services/reforma-integral.svg';
+import service_demolicion from '../../assets/img/services/demolicion.svg';
+import service_contruccion_general from '../../assets/img/services/contruccion-general.svg';
+
 class ServicesContainer extends Component {
     constructor(prosp) {
         super(prosp)
@@ -20,35 +24,53 @@ class ServicesContainer extends Component {
         carrusel: false,
         items: [
             {
-                img: service_1,
-                description: 'Reformas',
-                tag: "reforma",
+                img: service_cocina,
+                description: 'Cocinas',
+                tag: "cocina",
                 _id: 1
             },
             {
-                img: service_2,
-                description: 'Pinturas',
-                tag: "pintura",
+                img: service_piscina,
+                description: 'Piscina',
+                tag: "piscina",
                 _id: 2
             },
             {
-                img: service_3,
-                description: 'Fachadas',
-                tag: "fachada",
+                img: service_pintura,
+                description: 'Pintura',
+                tag: "pintura",
                 _id: 3
             },
             {
-                img: service_4,
-                description: 'Bajantes',
-                tag: "bajantes",
+                img: service_carpinteria,
+                description: 'Carpinteria',
+                tag: "carpinteria",
                 _id: 4
             },
             {
-                img: service_5,
-                description: 'Cerrajeria',
-                tag: "cerrajeria",
+                img: service_solares,
+                description: 'Solares',
+                tag: "solares",
                 _id: 5
-            }
+            },
+            {
+                img: service_reforma_integral,
+                description: 'Reforma Integral',
+                tag: "reforma_integral",
+                _id: 6
+            },
+            {
+                img: service_demolicion,
+                description: 'Demoliciones',
+                tag: "demolicion",
+                _id: 7
+            },
+            {
+                img: service_contruccion_general,
+                description: 'Construcción General',
+                tag: "construccion_general",
+                _id: 8
+            },
         ]
     }
     handleClick() {

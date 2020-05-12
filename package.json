@@ -8,6 +8,7 @@
     "build:prod": "NODE_ENV=production webpack --mode=production",
     "build:local": "NODE_ENV=local webpack --mode=development",
     "start:dev": "webpack-dev-server --mode=development",
+    "build:dev": "webpack --watch --mode=development",
     "build:server:dev": "webpack --config ./webpack.server.config.js --mode=development",
     "build:server:prod": "NODE_ENV=production webpack --config ./webpack.server.config.js --mode=production",
     "server:dev": "babel-node ./server/server.js",

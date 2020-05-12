@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Dosis');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
 :root{
     --dosis-font: 'Dosis', system-ui; 
-
+    --montserrat-font: 'Montserrat', system-ui; 
     /* Colors */
     --red_btn: #d54130; 
     --red_icon: #aa3d30ff;

@@ -18,13 +18,17 @@
         & h1{
             padding-left: var(--spacing_medium);
             padding-right: var(--spacing_medium);
+            font-family: var(--montserrat-font);
         }
         & h2{
             padding-left: var(--spacing_medium);
             padding-right: var(--spacing_medium);
+            font-family: var(--montserrat-font);
         }
         & p{
             padding: var(--spacing_medium);
+            font-family: var(--montserrat-font);
+            font-weight: 300;
         }
         & .btn_primary{
             background: var(--red_btn);
