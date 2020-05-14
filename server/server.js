@@ -7,7 +7,7 @@ import cors from 'cors';
 import { transporter } from './transporter'
 import { StaticRouter } from 'react-router';
 import reactDOMServer from 'react-dom/server';
-import App from '../dist/ssr/app.39f91a23e1a37bfcd267';
+import App from '../dist/ssr/app.795e223a8473fe95d711';
 import cacheResponse from "../utils/responseCache";
 import dnsPrefetchControl from 'dns-prefetch-control';
 import frameguard from 'frameguard';
@@ -48,12 +48,12 @@ app.get('*', (req, res) => {
           <meta http-equiv="X-UA-Compatible" content="ie=edge" />
           <link rel="icon" type="image/png" href="/img/favicon.png" /> 
           <title>Bozi Construcciones y Reformas</title>
-          <link rel="stylesheet" href="/css/app.86d97cf8ea43697e79c9.css">
+          <link rel="stylesheet" href="/css/app.85b732e94ee307fc634f.css">
         </head>
         <body>
           <div id="app">${html}</div>
           <script src="/modules.js"></script>
-          <script src="/bundle.86d97cf8ea43697e79c9.js"></script>
+          <script src="/bundle.85b732e94ee307fc634f.js"></script>
 
         </body>
       </html>

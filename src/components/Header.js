@@ -70,7 +70,10 @@ class Header extends Component {
             this.props.history.push(`/servicios/${result[0].tag}`, { id: result[0].tag })
             this.setState({ menuSwitch: !this.state.menuSwitch })
             e.target.childNodes[0].value = ""
-            this.state.servicesMatch = []
+            this.setState({
+                servicesMatch: [],
+                searchValue: ''
+            })
         }
     }
     componentDidMount() {
@@ -139,7 +142,7 @@ class Header extends Component {
                                             {
                                                 this.state.servicesMatch.map(item => {
                                                     return <li>
-                                                        <Link to={`/servicios/${item.tag}`}>{item.description}</Link>
+                                                        <Link onClick={() => this.setState({ servicesMatch: [], searchValue: '' })} to={`/servicios/${item.tag}`}>{item.description}</Link>
                                                     </li>                                                   
                                                 })
                                             }
