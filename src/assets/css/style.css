@@ -27,15 +27,31 @@ body{
         opacity: 1;
         transform:translateY(0px);
     } 
-    & .loadApp{
-        width: 100%;
-        height: 100vh;
-        display:flex;
-        justify-content: center;
-        align-items: center;
-    }
+    
 }
 
+.helpwp{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: solid red 1px;
+    height: 20px;
+    width: 220px;
+    color: wheat;
+    background-color: #d54130;
+    border-radius: 45px;
+    right: 15px;
+    position: fixed;
+    bottom: 90px;
+    cursor: pointer;
+    padding: 8px;
+    transition: all .6s;
+    box-shadow: 1px 1px 2px rgba(0,0,0,.6);
+    text-decoration: none;
+    &:hover{
+            box-shadow: 3px 3px 7px rgba(0,0,0,.6);
+        }
+    }
 section{
     margin-bottom: var(--spacing_large);
 }

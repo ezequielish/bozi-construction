@@ -21,56 +21,7 @@ header{
                 cursor: pointer;
             }
         }
-        & ul{
-            background: var(--black-color);
-            height: 100vh;
-            position: absolute;
-            top: 0;
-            margin: 0;
-            z-index: 2;
-            right: 0;
-            width: 50%;
-            display: flex;
-            transform: translateX(380px);
-            flex-direction: column;
-            padding: calc(var(--spacing_large) + var(--spacing_large));
-            & li{
-                list-style: none;
-                margin-top: 25px;
-                & a{
-                    color:white;
-                    text-decoration: none;
-                    font-size: 1.2em;
-                }
-                & input{
-                    border:none;
-                    outline: none;
-                    background: none;
-                    color:white;
-                    font-size: 1.2em;
-                }
-            }
-            & .Navbar__btn_close{
-                position: absolute;
-                right: 0;
-                top: 0;
-                padding: var(--spacing_large);
-                cursor: pointer;
-                & button{
-                    background: none;
-                    border:none;
-                    outline:none;
-                }
-                & img{
-                    will-change: transform;
-                    transition: all .8s;
-                    &:hover{
-                        transform: rotate(180deg);
-                    } 
-                }
-
-            }
-        }
+        
     }
     & .Navbar__btn_open{
         cursor: pointer;
@@ -95,11 +46,62 @@ header{
     & .SocialNetwork{
         display: none;
     }
+    
 }
+.ul-menu{
+    background: var(--black-color);
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    margin: 0;
+    z-index: 2;
+    right: 0;
+    width: 50%;
+    display: flex;
+    transform: translateX(380px);
+    flex-direction: column;
+    padding: calc(var(--spacing_large) + var(--spacing_large));
+    & li{
+        list-style: none;
+        margin-top: 25px;
+        & a{
+            color:white;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        & input{
+            border:none;
+            outline: none;
+            background: none;
+            color:white;
+            font-size: 1.2em;
+        }
+    }
+    & .Navbar__btn_close{
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: var(--spacing_large);
+        cursor: pointer;
+        & button{
+            background: none;
+            border:none;
+            outline:none;
+        }
+        & img{
+            will-change: transform;
+            transition: all .8s;
+            &:hover{
+                transform: rotate(180deg);
+            } 
+        }
 
+    }
+}
 /* TABLET */
 @media (min-width: 600px) {
     header{
+        transition: background .8s;
         height: 20vh;
         & nav{
         & .Navbar__marca{
@@ -111,7 +113,7 @@ header{
                 margin: 0;
             }
         }
-        & ul{
+        & .ul-menu{
             transform: translateX(400px);
             width: 30%;           
         }
@@ -141,7 +143,7 @@ header{
                     margin: 0;
                 }
             }
-            & ul{
+            & .ul-menu{
                 background-color: var(--white-color);
                 position: relative;
                 width: 100%;
@@ -161,9 +163,37 @@ header{
                     &:hover{
                         border-bottom: 1px solid var(--black-color);
                     }
-                    & input{
-                        color:black;
+                    & form{
+                        position: relative;
+                        & input{
+                            color:black;
+                        }  
+                        & ul {
+                            position: absolute;
+                            background-color: white;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            padding: 0;
+                            width: 100%;
+                            margin-top: 10px;
+                             & li{
+                                width: 100%;
+                                cursor: pointer;
+                                text-align: center;
+                                padding: 0;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                & a{
+                                    width: 100%;
+                                    padding: 5px;
+                                }
+                             }
+                        }
                     }
+                    
                 } 
             }
             & .Navbar__btn_close{

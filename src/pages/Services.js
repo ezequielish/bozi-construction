@@ -6,6 +6,7 @@ import data from '../data/app';
 import services from '../data/services';
 import HeroServices from '../components/container/HeroServices'
 import NotFound from './NotFound';
+import HelpWp from '../components/HelpWp'
 class Services extends Component {
 
     render() {
@@ -28,6 +29,7 @@ class Services extends Component {
                 <Header data={data.menu} services={services} history={this.props.history} />
                 <HeroServices data={thisService} />
                 <ContactContainer />
+                <HelpWp />
                 <Footer />
             </Fragment>
         )

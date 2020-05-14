@@ -91,7 +91,7 @@ class ContactContainer extends Component {
 
                     <div className='description-info'>
                         <p><img src={whatsapp} width='20px' height='20px' /> +34 671 79 80 82</p>
-                        <p><img src={whatsapp} width='20px' height='20px' /> +34 644 87 20 16</p>
+                        {/* <p><img src={whatsapp} width='20px' height='20px' /> +34 644 87 20 16</p> */}
                         <p><img src={email} width='20px' height='20px' /> bozicontruccionesreformas@gmail.com</p>
                         <p><img src={mapa} width='20px' height='20px' /><img /> Valencia, España.</p>
                     </div>

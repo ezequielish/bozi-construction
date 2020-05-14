@@ -5,7 +5,8 @@ import HeroContainer from '../components/container/HeroContainer';
 import ServicesContainer from '../components/container/ServicesContainer';
 import About from '../components/About';
 import Methodology from '../components/Methodology';
-import ProjectsContainer from '../components/container/ProjectsContainer';
+import HelpWp from '../components/HelpWp';
+// import ProjectsContainer from '../components/container/ProjectsContainer';
 import ContactContainer from '../components/container/ContactContainer';
 import data from '../data/app';
 import services from '../data/services';
@@ -20,6 +21,7 @@ class Home extends Component {
                 <Methodology data={data.methodology} />
                 {/* <ProjectsContainer /> */}
                 <ContactContainer />
+                <HelpWp />
                 <Footer />
             </ Fragment>
         )

@@ -1,26 +1,30 @@
 import React, { Component } from 'react';
 import aboutImg from '../assets/img/about.jpg';
-import { fadeElement } from '../assets/js/effects'
 
 class About extends Component {
     constructor(props) {
         super(props)
         this.aboutDescription = null
-        this.setAboutDescription = e => {
-            this.aboutDescription = e
-        }
+        this.descriptionContent = React.createRef()
 
     }
-
+    state = {
+        showContent: false,
+    }
 
     componentDidMount() {
-        let w = window
-        w.addEventListener('scroll', () => {
-            if(this.aboutDescription){
-                fadeElement(this.aboutDescription)
-            }
-           
-        })
+        const _this = this
+        const observer = new window.IntersectionObserver(function(entries) {               
+          const { isIntersecting } = entries[0]; //sacamos todos los itens que estan en el viewport
+
+          if (isIntersecting) {
+            _this.setState({
+                showContent: true
+            })
+            observer.disconnect(); //una vez que se muestre el item ya lo desconectamos
+          }
+        });
+        observer.observe(this.descriptionContent.current); // le pasamos el elemento al observe
     }
     render() {
         return (
@@ -33,7 +37,7 @@ class About extends Component {
                             <img src={aboutImg} className='about-img' />
                         </figure>
                     </div>
-                    <div className="About__description" ref={this.setAboutDescription}>
+                    <div className={`About__description ${this.state.showContent && 'show'}`} ref={this.descriptionContent }>
                         <h3>SERVICIO DE CALIDAD</h3>
                         <p>
                             <strong>Bozi Construcciones y Reformas</strong>, cuenta con una amplia experiencia en el sector de la construcción, lo que le ha permitido especializarse en todo tipo de trabajos de Construcción especializándonos sobre todo en reformas integrales de vivienda y reformas.

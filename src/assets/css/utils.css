@@ -20,4 +20,13 @@
 
 }
 
+.show{
+    transform:translateY(0px) !important; 
+    transition:1s; opacity: 1 !important; 
+}
 
+
+.headerWhite{
+    transition: background .8s;
+    background-color: #ffffff;
+}

@@ -1,17 +1,7 @@
 import React, { Component } from 'react';
 import methodologyImg from '../assets/img/methodology.jpg';
 import ItemsMethodology from './ItemsMethodology';
-import { fade } from '../assets/js/effects';
 class Methodology extends Component {
-
-    componentDidMount() {
-        window.addEventListener('scroll', () => {
-            let element = document.querySelectorAll('.Methodology__items');
-            fade(element)
-
-        })
-    }
-
     render() {
         const { data: methodology } = this.props;
 

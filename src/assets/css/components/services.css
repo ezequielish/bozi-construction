@@ -59,6 +59,7 @@
 
 /* DESKTOP */
 @media (min-width: 1024px) {
+    
     .Services{
         justify-content: center;
         align-items: center;         
@@ -68,7 +69,7 @@
       & .Services__description{
             width: 80%;
             margin: var(--spacing_large);
-            ransform: translateY(-15px);
+            transform: translateY(-15px);
             opacity: 0;
       }
       & .Services__category{

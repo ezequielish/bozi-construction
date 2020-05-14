@@ -1,15 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { fadeElement } from '../../assets/js/effects';
-import service_cocina from '../../assets/img/services/cocinas.svg';
-import service_piscina from '../../assets/img/services/piscina.svg';
-import service_pintura from '../../assets/img/services/pintura.svg';
-import service_carpinteria from '../../assets/img/services/carpinteria.svg';
-import service_solares from '../../assets/img/services/solares.svg';
-import service_reforma_integral from '../../assets/img/services/reforma-integral.svg';
-import service_demolicion from '../../assets/img/services/demolicion.svg';
-import service_contruccion_general from '../../assets/img/services/contruccion-general.svg';
+import Loading from '../Loading'
 import ServicesItems from '../ServicesItems';
+import { items } from '../../assets/js/services'
+
 class HeroServices extends Component {
     constructor(props) {
         super(props)
@@ -17,56 +11,7 @@ class HeroServices extends Component {
         this.state = {
             fadeIn: true,
             imgLoad: false,
-            items: [
-                {
-                    img: service_cocina,
-                    description: 'Cocinas',
-                    tag: "cocina",
-                    _id: 1
-                },
-                {
-                    img: service_piscina,
-                    description: 'Piscina',
-                    tag: "piscina",
-                    _id: 2
-                },
-                {
-                    img: service_pintura,
-                    description: 'Pintura',
-                    tag: "pintura",
-                    _id: 3
-                },
-                {
-                    img: service_carpinteria,
-                    description: 'Carpinteria',
-                    tag: "carpinteria",
-                    _id: 4
-                },
-                {
-                    img: service_solares,
-                    description: 'Solares',
-                    tag: "solares",
-                    _id: 5
-                },
-                {
-                    img: service_reforma_integral,
-                    description: 'Reforma Integral',
-                    tag: "reforma_integral",
-                    _id: 6
-                },
-                {
-                    img: service_demolicion,
-                    description: 'Demoliciones',
-                    tag: "demolicion",
-                    _id: 7
-                },
-                {
-                    img: service_contruccion_general,
-                    description: 'Construcción General',
-                    tag: "construccion_general",
-                    _id: 8
-                },
-            ]
+            items: []
         }
     }
 
@@ -92,12 +37,12 @@ class HeroServices extends Component {
             this.setState({ fadeIn: true })
         }, 500);
     }
-    componentDidMount() {
-        this.descriptionDiv = this.descriptionContent.current;
-        this.setState({ fadeIn: true })
-        fadeElement(this.descriptionDiv)
-    }
 
+    componentWillMount(){
+        this.setState({
+            items: items
+        })
+    }
     render() {
 
         const { data: service } = this.props
@@ -109,7 +54,7 @@ class HeroServices extends Component {
                     {
                         !this.state.imgLoad &&
                         <div className="loadSpinner">
-                            <p>Cargando ...</p>
+                            <Loading />
                         </div>
                     }
                     <img src={service[0].url} style={{ opacity: 0 }} onLoad={this.loadImg.bind(this)} className="ServicesHero__img_hero" />
@@ -118,11 +63,11 @@ class HeroServices extends Component {
                 <div className="ServicesHero__description_container">
                     <h1>{service[0].title}</h1>
 
-                    <div className="ServicesHero_description preLoad" ref={this.descriptionContent} >
+                    <div className="ServicesHero_description" ref={this.descriptionContent} >
 
                         {
                             service[0].description.split('\n').map((p, index) => {
-                                return <p key={index} className={this.state.fadeIn ? 'loadElement' : 'preLoad'} >{p}</p>
+                                return <p key={index}>{p}</p>
                             })
                         }
                     </div>
