@@ -18,7 +18,7 @@ var _reactRouter = require("react-router");
 
 var _server = _interopRequireDefault(require("react-dom/server"));
 
-var _app = _interopRequireDefault(require("../dist/ssr/app.a509daa98b80d0f0a46d"));
+var _app = _interopRequireDefault(require("../dist/ssr/app.86d97cf8ea43697e79c9"));
 
 var _responseCache = _interopRequireDefault(require("../utils/responseCache"));
 
@@ -55,7 +55,7 @@ app.get('*', function (req, res) {
     }
   }, _react["default"].createElement(_app["default"], null)));
 
-  res.write("\n      <!DOCTYPE html>\n        <html lang=\"es\">\n        <head>\n          <meta charset=\"UTF-8\">\n          <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n          <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\" />\n          <link rel=\"icon\" type=\"image/png\" href=\"/img/favicon.png\" /> \n          <title>Bozi Construcciones y Reformas</title>\n          <link rel=\"stylesheet\" href=\"/css/app.d10c6f1bc642581d808f.css\">\n        </head>\n        <body>\n          <div id=\"app\">".concat(html, "</div>\n          <script src=\"/modules.js\"></script>\n          <script src=\"/bundle.d10c6f1bc642581d808f.js\"></script>\n\n        </body>\n      </html>\n    "));
+  res.write("\n      <!DOCTYPE html>\n        <html lang=\"es\">\n        <head>\n          <meta charset=\"UTF-8\">\n          <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n          <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\" />\n          <link rel=\"icon\" type=\"image/png\" href=\"/img/favicon.png\" /> \n          <title>Bozi Construcciones y Reformas</title>\n          <link rel=\"stylesheet\" href=\"/css/app.86d97cf8ea43697e79c9.css\">\n        </head>\n        <body>\n          <div id=\"app\">".concat(html, "</div>\n          <script src=\"/modules.js\"></script>\n          <script src=\"/bundle.86d97cf8ea43697e79c9.js\"></script>\n\n        </body>\n      </html>\n    "));
   res.end();
 });
 app.post('/contactar', function (req, res) {
